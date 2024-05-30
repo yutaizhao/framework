@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<service name="SolverLogger" version="1.0" type="caseoption">
+
+  <description>Solver Logger</description>
+  <interface name="Alien::ILogger" inherited="false"/>
+
+  <options>
+    <simple name="out-filename" type="string" default="alienTestResult.txt">
+      <description>Output filename</description>
+    </simple>
+  </options>
+</service>

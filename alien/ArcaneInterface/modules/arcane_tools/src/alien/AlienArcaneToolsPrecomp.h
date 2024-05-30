@@ -11,5 +11,6 @@
 #include <alien/utils/Precomp.h>
 #include "alien/AlienArcaneToolsExport.h"
 #include <alien/AlienLegacyConfig.h>
+#include <arcane/IParallelMng.h>
 
 #endif
