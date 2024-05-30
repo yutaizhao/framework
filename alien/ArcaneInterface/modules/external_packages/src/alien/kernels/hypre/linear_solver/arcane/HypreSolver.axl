@@ -54,5 +54,8 @@
         <simple name="verbose" type="bool" default="false">
             <description>Verbosity flag</description>
         </simple>
+	<service-instance name="logger" type="Alien::ILogger" minOccurs="0" maxOccurs="1">
+            <description>Logger</description>
+        </service-instance>
     </options>
 </service>
