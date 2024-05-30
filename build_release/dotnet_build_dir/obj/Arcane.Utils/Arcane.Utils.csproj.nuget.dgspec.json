@@ -1,0 +1,64 @@
+{
+  "format": 1,
+  "restore": {
+    "/work/zhaoy/Bureau/framework/arcane/tools/Arcane.Utils/Arcane.Utils.csproj": {}
+  },
+  "projects": {
+    "/work/zhaoy/Bureau/framework/arcane/tools/Arcane.Utils/Arcane.Utils.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/work/zhaoy/Bureau/framework/arcane/tools/Arcane.Utils/Arcane.Utils.csproj",
+        "projectName": "Arcane.Utils",
+        "projectPath": "/work/zhaoy/Bureau/framework/arcane/tools/Arcane.Utils/Arcane.Utils.csproj",
+        "packagesPath": "/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/packages/",
+        "outputPath": "/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj//Arcane.Utils/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/work/zhaoy/Bureau/framework/nuget.config",
+          "/work/zhaoy/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "/work/zhaoy/Bureau/framework/dependencies/nuget_fallback": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/soft/irsrvsoft1/expl/eb/r11/el_9-x86_64/easybuild/software/dotNET-SDK/6.0.101-GCCcore-11.2.0-linux-x64/sdk/6.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

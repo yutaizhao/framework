@@ -1,0 +1,16 @@
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.UnifiedDriver/netcoreapp6.0/Arcane.UnifiedDriver
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.UnifiedDriver/netcoreapp6.0/Arcane.UnifiedDriver.deps.json
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.UnifiedDriver/netcoreapp6.0/Arcane.UnifiedDriver.runtimeconfig.json
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.UnifiedDriver/netcoreapp6.0/Arcane.UnifiedDriver.dll
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.UnifiedDriver/netcoreapp6.0/ref/Arcane.UnifiedDriver.dll
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.UnifiedDriver/netcoreapp6.0/Arcane.UnifiedDriver.pdb
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.UnifiedDriver/netcoreapp6.0/Arcane.UnifiedDriver.csproj.AssemblyReference.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.UnifiedDriver/netcoreapp6.0/Arcane.UnifiedDriver.GeneratedMSBuildEditorConfig.editorconfig
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.UnifiedDriver/netcoreapp6.0/Arcane.UnifiedDriver.AssemblyInfoInputs.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.UnifiedDriver/netcoreapp6.0/Arcane.UnifiedDriver.AssemblyInfo.cs
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.UnifiedDriver/netcoreapp6.0/Arcane.UnifiedDriver.csproj.CoreCompileInputs.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.UnifiedDriver/netcoreapp6.0/Arcane.UnifiedDriver.csproj.CopyComplete
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.UnifiedDriver/netcoreapp6.0/Arcane.UnifiedDriver.dll
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.UnifiedDriver/netcoreapp6.0/ref/Arcane.UnifiedDriver.dll
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.UnifiedDriver/netcoreapp6.0/Arcane.UnifiedDriver.pdb
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.UnifiedDriver/netcoreapp6.0/Arcane.UnifiedDriver.genruntimeconfig.cache

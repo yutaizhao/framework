@@ -1,0 +1,5 @@
+/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.Utils.Generator
+/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.Utils.Generator.dll
+/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.Utils.Generator.deps.json
+/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.Utils.Generator.runtimeconfig.json
+/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.Utils.Generator.pdb

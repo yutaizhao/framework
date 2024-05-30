@@ -1,0 +1,11 @@
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.MatVec/netstandard2.0/Arcane.MatVec.deps.json
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.MatVec/netstandard2.0/Arcane.MatVec.dll
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.MatVec/netstandard2.0/Arcane.MatVec.pdb
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.MatVec/netstandard2.0/Arcane.MatVec.csproj.AssemblyReference.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.MatVec/netstandard2.0/Arcane.MatVec.GeneratedMSBuildEditorConfig.editorconfig
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.MatVec/netstandard2.0/Arcane.MatVec.AssemblyInfoInputs.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.MatVec/netstandard2.0/Arcane.MatVec.AssemblyInfo.cs
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.MatVec/netstandard2.0/Arcane.MatVec.csproj.CoreCompileInputs.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.MatVec/netstandard2.0/Arcane.MatVec.csproj.CopyComplete
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.MatVec/netstandard2.0/Arcane.MatVec.dll
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.MatVec/netstandard2.0/Arcane.MatVec.pdb

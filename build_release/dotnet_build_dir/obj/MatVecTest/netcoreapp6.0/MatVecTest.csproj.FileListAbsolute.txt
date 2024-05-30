@@ -1,0 +1,16 @@
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/MatVecTest/netcoreapp6.0/MatVecTest
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/MatVecTest/netcoreapp6.0/MatVecTest.deps.json
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/MatVecTest/netcoreapp6.0/MatVecTest.runtimeconfig.json
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/MatVecTest/netcoreapp6.0/MatVecTest.dll
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/MatVecTest/netcoreapp6.0/ref/MatVecTest.dll
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/MatVecTest/netcoreapp6.0/MatVecTest.pdb
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/MatVecTest/netcoreapp6.0/MatVecTest.csproj.AssemblyReference.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/MatVecTest/netcoreapp6.0/MatVecTest.GeneratedMSBuildEditorConfig.editorconfig
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/MatVecTest/netcoreapp6.0/MatVecTest.AssemblyInfoInputs.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/MatVecTest/netcoreapp6.0/MatVecTest.AssemblyInfo.cs
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/MatVecTest/netcoreapp6.0/MatVecTest.csproj.CoreCompileInputs.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/MatVecTest/netcoreapp6.0/MatVecTest.csproj.CopyComplete
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/MatVecTest/netcoreapp6.0/MatVecTest.dll
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/MatVecTest/netcoreapp6.0/ref/MatVecTest.dll
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/MatVecTest/netcoreapp6.0/MatVecTest.pdb
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/MatVecTest/netcoreapp6.0/MatVecTest.genruntimeconfig.cache

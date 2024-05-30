@@ -1,0 +1,11 @@
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/Arcane.Axl.T4/netstandard2.0/Arcane.Axl.T4.deps.json
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/Arcane.Axl.T4/netstandard2.0/Arcane.Axl.T4.dll
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/Arcane.Axl.T4/netstandard2.0/Arcane.Axl.T4.pdb
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Arcane.Axl.T4/netstandard2.0/Arcane.Axl.T4.csproj.AssemblyReference.cache
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Arcane.Axl.T4/netstandard2.0/Arcane.Axl.T4.GeneratedMSBuildEditorConfig.editorconfig
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Arcane.Axl.T4/netstandard2.0/Arcane.Axl.T4.AssemblyInfoInputs.cache
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Arcane.Axl.T4/netstandard2.0/Arcane.Axl.T4.AssemblyInfo.cs
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Arcane.Axl.T4/netstandard2.0/Arcane.Axl.T4.csproj.CoreCompileInputs.cache
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Arcane.Axl.T4/netstandard2.0/Arcane.Axl.T4.csproj.CopyComplete
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Arcane.Axl.T4/netstandard2.0/Arcane.Axl.T4.dll
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Arcane.Axl.T4/netstandard2.0/Arcane.Axl.T4.pdb

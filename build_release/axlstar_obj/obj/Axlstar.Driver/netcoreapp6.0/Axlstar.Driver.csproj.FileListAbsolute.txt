@@ -1,0 +1,16 @@
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/Axlstar.Driver/netcoreapp6.0/Axlstar.Driver
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/Axlstar.Driver/netcoreapp6.0/Axlstar.Driver.deps.json
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/Axlstar.Driver/netcoreapp6.0/Axlstar.Driver.runtimeconfig.json
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/Axlstar.Driver/netcoreapp6.0/Axlstar.Driver.dll
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/Axlstar.Driver/netcoreapp6.0/ref/Axlstar.Driver.dll
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/Axlstar.Driver/netcoreapp6.0/Axlstar.Driver.pdb
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Axlstar.Driver/netcoreapp6.0/Axlstar.Driver.csproj.AssemblyReference.cache
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Axlstar.Driver/netcoreapp6.0/Axlstar.Driver.GeneratedMSBuildEditorConfig.editorconfig
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Axlstar.Driver/netcoreapp6.0/Axlstar.Driver.AssemblyInfoInputs.cache
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Axlstar.Driver/netcoreapp6.0/Axlstar.Driver.AssemblyInfo.cs
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Axlstar.Driver/netcoreapp6.0/Axlstar.Driver.csproj.CoreCompileInputs.cache
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Axlstar.Driver/netcoreapp6.0/Axlstar.Driver.csproj.CopyComplete
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Axlstar.Driver/netcoreapp6.0/Axlstar.Driver.dll
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Axlstar.Driver/netcoreapp6.0/ref/Axlstar.Driver.dll
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Axlstar.Driver/netcoreapp6.0/Axlstar.Driver.pdb
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Axlstar.Driver/netcoreapp6.0/Axlstar.Driver.genruntimeconfig.cache

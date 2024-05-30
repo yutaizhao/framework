@@ -1,0 +1,11 @@
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.ExecDrivers/netstandard2.0/Arcane.ExecDrivers.deps.json
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.ExecDrivers/netstandard2.0/Arcane.ExecDrivers.dll
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.ExecDrivers/netstandard2.0/Arcane.ExecDrivers.pdb
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.ExecDrivers/netstandard2.0/Arcane.ExecDrivers.csproj.AssemblyReference.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.ExecDrivers/netstandard2.0/Arcane.ExecDrivers.GeneratedMSBuildEditorConfig.editorconfig
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.ExecDrivers/netstandard2.0/Arcane.ExecDrivers.AssemblyInfoInputs.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.ExecDrivers/netstandard2.0/Arcane.ExecDrivers.AssemblyInfo.cs
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.ExecDrivers/netstandard2.0/Arcane.ExecDrivers.csproj.CoreCompileInputs.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.ExecDrivers/netstandard2.0/Arcane.ExecDrivers.csproj.CopyComplete
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.ExecDrivers/netstandard2.0/Arcane.ExecDrivers.dll
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.ExecDrivers/netstandard2.0/Arcane.ExecDrivers.pdb

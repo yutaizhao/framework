@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<commands>
+  <test>-We,STDENV_VERIF,WRITE -We,STDENV_VERIF_PATH,compare_seq_seq_lz4_dump -We,ARCANE_DEFLATER,LZ4 -m 5 /work/zhaoy/Bureau/framework/arcane/tests/testHydro-3.arc</test>
+  <test>-We,STDENV_VERIF,READ -We,STDENV_VERIF_PATH,compare_seq_seq_lz4_dump -m 5 /work/zhaoy/Bureau/framework/arcane/tests/testHydro-3.arc</test>
+  <driver>compare compare_seq_seq_lz4_dump/verif_file/iter6/_EndLoop0 compare_seq_seq_lz4_dump/verif_file/iter5/_EndLoop0</driver>
+</commands>

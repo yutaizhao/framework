@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "TVJYO8FBAj18R/FZp/Upf59vz89OSoo53d9C0lVwb1MNCrLAy0fokeTEZ4leiFm85TUGA/W/cq+X41xCFONw0A==",
+  "success": true,
+  "projectFilePath": "/work/zhaoy/Bureau/framework/axlstar/Axlstar.Axl2ccT4/Axlstar.Axl2ccT4.csproj",
+  "expectedPackageFiles": [
+    "/work/zhaoy/Bureau/framework/build_release/axlstar_obj/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/work/zhaoy/Bureau/framework/build_release/axlstar_obj/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
+    "/work/zhaoy/Bureau/framework/build_release/axlstar_obj/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/work/zhaoy/Bureau/framework/build_release/axlstar_obj/packages/system.codedom/4.4.0/system.codedom.4.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}

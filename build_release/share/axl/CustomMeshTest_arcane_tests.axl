@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- -*- SGML -*- -->
+<module name="CustomMeshTest" version="1.0" namespace-name="ArcaneTest::CustomMesh">
+  <description>Module to test custom mesh</description>
+  <entry-points>
+    <entry-point method-name="init" name="Init" where="init" property="none" />
+  </entry-points>
+  <options>
+    <complex name="mesh-size" minOccurs="0" type="MeshSizeType">
+      <simple name="nb-cells" type="integer"/>
+      <simple name="nb-faces" type="integer"/>
+      <simple name="nb-edges" type="integer"/>
+      <simple name="nb-nodes" type="integer"/>
+    </complex>
+    <complex name="mesh-coordinates" minOccurs="0" maxOccurs="1" type="MeshCoordinatesType">
+      <simple name="do-check" type="bool"/>
+      <complex name="coords" minOccurs="0" type="CoordsType">
+        <simple name="value" minOccurs="0" maxOccurs="unbounded" type="real3"/>
+      </complex>
+    </complex>
+    <complex name="check-group" minOccurs="0" maxOccurs="unbounded" type="CheckGroup">
+      <simple name="name" type="string"/>
+      <simple name="size" type="integer"/>
+    </complex>
+    <simple name="nb-mesh-group" minOccurs="1" maxOccurs="1" type="integer"/>
+    <simple name="check-boundary-face-group" minOccurs="0" maxOccurs="unbounded" type="string"/>
+    <simple name="check-internal-face-group" minOccurs="0" maxOccurs="unbounded" type="string"/>
+    <simple name="check-cell-variable-real" minOccurs="0" maxOccurs="unbounded" type="string"/>
+    <simple name="check-cell-variable-integer" minOccurs="0" maxOccurs="unbounded" type="string"/>
+    <simple name="check-cell-variable-array-real" minOccurs="0" maxOccurs="unbounded" type="string"/>
+    <simple name="check-cell-variable-array-integer" minOccurs="0" maxOccurs="unbounded" type="string"/>
+    <simple name="check-node-variable-real" minOccurs="0" maxOccurs="unbounded" type="string"/>
+    <simple name="check-node-variable-integer" minOccurs="0" maxOccurs="unbounded" type="string"/>
+    <simple name="check-node-variable-array-real" minOccurs="0" maxOccurs="unbounded" type="string"/>
+    <simple name="check-node-variable-array-integer" minOccurs="0" maxOccurs="unbounded" type="string"/>
+    <simple name="check-face-variable-real" minOccurs="0" maxOccurs="unbounded" type="string"/>
+    <simple name="check-face-variable-integer" minOccurs="0" maxOccurs="unbounded" type="string"/>
+    <simple name="check-face-variable-array-real" minOccurs="0" maxOccurs="unbounded" type="string"/>
+    <simple name="check-face-variable-array-integer" minOccurs="0" maxOccurs="unbounded" type="string"/>
+  </options>
+
+  <variables>
+    <variable field-name="cell_variable" name="CellVariable"
+              data-type="real" item-kind="cell" dim="0" dump="true" need-sync="true"/>
+    <variable field-name="face_variable" name="FaceVariable"
+              data-type="real" item-kind="face" dim="0" dump="true" need-sync="true" />
+    <variable field-name="node_variable" name="NodeVariable"
+              data-type="real" item-kind="node" dim="0" dump="true" need-sync="true" />
+    <variable field-name="edge_variable" name="EdgeVariable"
+              data-type="real" item-kind="edge" dim="0" dump="true" need-sync="true" />
+  </variables>
+
+</module>

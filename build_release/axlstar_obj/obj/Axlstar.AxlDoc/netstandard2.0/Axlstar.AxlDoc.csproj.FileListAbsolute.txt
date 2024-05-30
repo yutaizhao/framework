@@ -1,0 +1,11 @@
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/Axlstar.AxlDoc/netstandard2.0/Axlstar.AxlDoc.deps.json
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/Axlstar.AxlDoc/netstandard2.0/Axlstar.AxlDoc.dll
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/Axlstar.AxlDoc/netstandard2.0/Axlstar.AxlDoc.pdb
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Axlstar.AxlDoc/netstandard2.0/Axlstar.AxlDoc.csproj.AssemblyReference.cache
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Axlstar.AxlDoc/netstandard2.0/Axlstar.AxlDoc.GeneratedMSBuildEditorConfig.editorconfig
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Axlstar.AxlDoc/netstandard2.0/Axlstar.AxlDoc.AssemblyInfoInputs.cache
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Axlstar.AxlDoc/netstandard2.0/Axlstar.AxlDoc.AssemblyInfo.cs
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Axlstar.AxlDoc/netstandard2.0/Axlstar.AxlDoc.csproj.CoreCompileInputs.cache
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Axlstar.AxlDoc/netstandard2.0/Axlstar.AxlDoc.csproj.CopyComplete
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Axlstar.AxlDoc/netstandard2.0/Axlstar.AxlDoc.dll
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Axlstar.AxlDoc/netstandard2.0/Axlstar.AxlDoc.pdb

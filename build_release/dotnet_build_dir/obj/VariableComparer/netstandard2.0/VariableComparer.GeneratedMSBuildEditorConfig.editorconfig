@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = VariableComparer
+build_property.ProjectDir = /work/zhaoy/Bureau/framework/arcane/tools/VariableComparer/

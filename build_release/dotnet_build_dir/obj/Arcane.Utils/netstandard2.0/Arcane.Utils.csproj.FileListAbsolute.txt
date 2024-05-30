@@ -1,0 +1,10 @@
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.Utils/netstandard2.0/Arcane.Utils.deps.json
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.Utils/netstandard2.0/Arcane.Utils.dll
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.Utils/netstandard2.0/Arcane.Utils.pdb
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Utils/netstandard2.0/Arcane.Utils.csproj.AssemblyReference.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Utils/netstandard2.0/Arcane.Utils.GeneratedMSBuildEditorConfig.editorconfig
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Utils/netstandard2.0/Arcane.Utils.AssemblyInfoInputs.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Utils/netstandard2.0/Arcane.Utils.AssemblyInfo.cs
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Utils/netstandard2.0/Arcane.Utils.csproj.CoreCompileInputs.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Utils/netstandard2.0/Arcane.Utils.dll
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Utils/netstandard2.0/Arcane.Utils.pdb

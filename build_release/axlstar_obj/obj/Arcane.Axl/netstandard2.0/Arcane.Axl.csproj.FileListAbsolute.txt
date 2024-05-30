@@ -1,0 +1,10 @@
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/Arcane.Axl/netstandard2.0/Arcane.Axl.deps.json
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/Arcane.Axl/netstandard2.0/Arcane.Axl.dll
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/Arcane.Axl/netstandard2.0/Arcane.Axl.pdb
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Arcane.Axl/netstandard2.0/Arcane.Axl.csproj.AssemblyReference.cache
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Arcane.Axl/netstandard2.0/Arcane.Axl.GeneratedMSBuildEditorConfig.editorconfig
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Arcane.Axl/netstandard2.0/Arcane.Axl.AssemblyInfoInputs.cache
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Arcane.Axl/netstandard2.0/Arcane.Axl.AssemblyInfo.cs
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Arcane.Axl/netstandard2.0/Arcane.Axl.csproj.CoreCompileInputs.cache
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Arcane.Axl/netstandard2.0/Arcane.Axl.dll
+/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj/Arcane.Axl/netstandard2.0/Arcane.Axl.pdb

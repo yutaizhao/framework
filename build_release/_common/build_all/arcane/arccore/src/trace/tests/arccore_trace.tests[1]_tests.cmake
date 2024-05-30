@@ -1,0 +1,5 @@
+add_test([=[TraceMng.FatalMessage]=]  /work/zhaoy/Bureau/framework/build_release/lib/arccore_trace.tests [==[--gtest_filter=TraceMng.FatalMessage]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[TraceMng.FatalMessage]=]  PROPERTIES WORKING_DIRECTORY /work/zhaoy/Bureau/framework/build_release/_common/build_all/arcane/arccore/src/trace/tests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[TraceMng.FatalMessage2]=]  /work/zhaoy/Bureau/framework/build_release/lib/arccore_trace.tests [==[--gtest_filter=TraceMng.FatalMessage2]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[TraceMng.FatalMessage2]=]  PROPERTIES WORKING_DIRECTORY /work/zhaoy/Bureau/framework/build_release/_common/build_all/arcane/arccore/src/trace/tests SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  arccore_trace.tests_TESTS TraceMng.FatalMessage TraceMng.FatalMessage2)

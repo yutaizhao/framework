@@ -1,0 +1,10 @@
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.Compiler.Directives/netstandard2.0/Arcane.Compiler.Directives.deps.json
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.Compiler.Directives/netstandard2.0/Arcane.Compiler.Directives.dll
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.Compiler.Directives/netstandard2.0/Arcane.Compiler.Directives.pdb
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Compiler.Directives/netstandard2.0/Arcane.Compiler.Directives.csproj.AssemblyReference.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Compiler.Directives/netstandard2.0/Arcane.Compiler.Directives.GeneratedMSBuildEditorConfig.editorconfig
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Compiler.Directives/netstandard2.0/Arcane.Compiler.Directives.AssemblyInfoInputs.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Compiler.Directives/netstandard2.0/Arcane.Compiler.Directives.AssemblyInfo.cs
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Compiler.Directives/netstandard2.0/Arcane.Compiler.Directives.csproj.CoreCompileInputs.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Compiler.Directives/netstandard2.0/Arcane.Compiler.Directives.dll
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Compiler.Directives/netstandard2.0/Arcane.Compiler.Directives.pdb

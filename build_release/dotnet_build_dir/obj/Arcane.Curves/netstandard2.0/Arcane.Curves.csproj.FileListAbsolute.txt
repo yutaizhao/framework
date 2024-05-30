@@ -1,0 +1,11 @@
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.Curves/netstandard2.0/Arcane.Curves.deps.json
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.Curves/netstandard2.0/Arcane.Curves.dll
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.Curves/netstandard2.0/Arcane.Curves.pdb
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Curves/netstandard2.0/Arcane.Curves.csproj.AssemblyReference.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Curves/netstandard2.0/Arcane.Curves.GeneratedMSBuildEditorConfig.editorconfig
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Curves/netstandard2.0/Arcane.Curves.AssemblyInfoInputs.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Curves/netstandard2.0/Arcane.Curves.AssemblyInfo.cs
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Curves/netstandard2.0/Arcane.Curves.csproj.CoreCompileInputs.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Curves/netstandard2.0/Arcane.Curves.csproj.CopyComplete
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Curves/netstandard2.0/Arcane.Curves.dll
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Curves/netstandard2.0/Arcane.Curves.pdb

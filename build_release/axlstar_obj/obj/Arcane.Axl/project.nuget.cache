@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "AWAT50DXMma6i03cmSvFynK0bOlr6/z2+9lqec+zf8nl8XHMGrNFydQZfWkRmcZWFwk/xsIephKAx4eL/6g8qw==",
+  "success": true,
+  "projectFilePath": "/work/zhaoy/Bureau/framework/axlstar/Arcane.Axl/Arcane.Axl.csproj",
+  "expectedPackageFiles": [
+    "/work/zhaoy/Bureau/framework/build_release/axlstar_obj/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/work/zhaoy/Bureau/framework/build_release/axlstar_obj/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,9 @@
+/work/zhaoy/Bureau/framework/build_release/bin/axlstar_dlls/Axlstar.Axl2ccT4.dll
+/work/zhaoy/Bureau/framework/build_release/bin/axlstar_dlls/Axlstar.Axl2ccT4.deps.json
+/work/zhaoy/Bureau/framework/build_release/bin/axlstar_dlls/Axlstar.Axl2ccT4.pdb
+/work/zhaoy/Bureau/framework/build_release/bin/axlstar_dlls/Newtonsoft.Json.dll
+/work/zhaoy/Bureau/framework/build_release/bin/axlstar_dlls/System.CodeDom.dll
+/work/zhaoy/Bureau/framework/build_release/bin/axlstar_dlls/Arcane.Axl.dll
+/work/zhaoy/Bureau/framework/build_release/bin/axlstar_dlls/Arcane.Axl.T4.dll
+/work/zhaoy/Bureau/framework/build_release/bin/axlstar_dlls/Arcane.Axl.T4.pdb
+/work/zhaoy/Bureau/framework/build_release/bin/axlstar_dlls/Arcane.Axl.pdb

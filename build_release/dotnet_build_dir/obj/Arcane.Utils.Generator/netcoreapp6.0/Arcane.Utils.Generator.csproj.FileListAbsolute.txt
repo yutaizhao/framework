@@ -1,0 +1,15 @@
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.Utils.Generator/netcoreapp6.0/Arcane.Utils.Generator
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.Utils.Generator/netcoreapp6.0/Arcane.Utils.Generator.deps.json
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.Utils.Generator/netcoreapp6.0/Arcane.Utils.Generator.runtimeconfig.json
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.Utils.Generator/netcoreapp6.0/Arcane.Utils.Generator.dll
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.Utils.Generator/netcoreapp6.0/ref/Arcane.Utils.Generator.dll
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/Arcane.Utils.Generator/netcoreapp6.0/Arcane.Utils.Generator.pdb
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Utils.Generator/netcoreapp6.0/Arcane.Utils.Generator.csproj.AssemblyReference.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Utils.Generator/netcoreapp6.0/Arcane.Utils.Generator.GeneratedMSBuildEditorConfig.editorconfig
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Utils.Generator/netcoreapp6.0/Arcane.Utils.Generator.AssemblyInfoInputs.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Utils.Generator/netcoreapp6.0/Arcane.Utils.Generator.AssemblyInfo.cs
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Utils.Generator/netcoreapp6.0/Arcane.Utils.Generator.csproj.CoreCompileInputs.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Utils.Generator/netcoreapp6.0/Arcane.Utils.Generator.dll
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Utils.Generator/netcoreapp6.0/ref/Arcane.Utils.Generator.dll
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Utils.Generator/netcoreapp6.0/Arcane.Utils.Generator.pdb
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/Arcane.Utils.Generator/netcoreapp6.0/Arcane.Utils.Generator.genruntimeconfig.cache

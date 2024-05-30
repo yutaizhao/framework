@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "dczl6fYG6hiwTDjSRaxrCZiNn6DFtlQyP/uB3xlu3/cTh1YfXtNdxW2F9DtDYv370s3CuokbG59b/2E9LY4PPA==",
+  "success": true,
+  "projectFilePath": "/work/zhaoy/Bureau/framework/arcane/tools/Arcane.Utils/Arcane.Utils.csproj",
+  "expectedPackageFiles": [
+    "/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

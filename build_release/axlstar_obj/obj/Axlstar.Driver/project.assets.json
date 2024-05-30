@@ -1,0 +1,263 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "System.CodeDom/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.CodeDom.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.CodeDom.dll": {}
+        }
+      },
+      "Arcane.Axl/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Arcane.Axl.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Arcane.Axl.dll": {}
+        }
+      },
+      "Arcane.Axl.T4/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Arcane.Axl": "1.0.0",
+          "Newtonsoft.Json": "13.0.1",
+          "System.CodeDom": "4.4.0"
+        },
+        "compile": {
+          "bin/placeholder/Arcane.Axl.T4.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Arcane.Axl.T4.dll": {}
+        }
+      },
+      "Axlstar.Axl2cc/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Arcane.Axl": "1.0.0",
+          "Arcane.Axl.T4": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Axlstar.Axl2cc.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Axlstar.Axl2cc.dll": {}
+        }
+      },
+      "Axlstar.Axl2ccT4/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Arcane.Axl.T4": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Axlstar.Axl2ccT4.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Axlstar.Axl2ccT4.dll": {}
+        }
+      },
+      "Axlstar.AxlCopy/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Arcane.Axl": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Axlstar.AxlCopy.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Axlstar.AxlCopy.dll": {}
+        }
+      },
+      "Axlstar.AxlDoc/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Arcane.Axl": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Axlstar.AxlDoc.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Axlstar.AxlDoc.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Newtonsoft.Json/13.0.1": {
+      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
+    "System.CodeDom/4.4.0": {
+      "sha512": "2sCCb7doXEwtYAbqzbF/8UAeDRMNmPaQbU2q50Psg1J9KzumyVVCgKQY8s53WIPTufNT0DpSe9QRvVjOzfDWBA==",
+      "type": "package",
+      "path": "system.codedom/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.CodeDom.dll",
+        "lib/netstandard2.0/System.CodeDom.dll",
+        "ref/net461/System.CodeDom.dll",
+        "ref/net461/System.CodeDom.xml",
+        "ref/netstandard2.0/System.CodeDom.dll",
+        "ref/netstandard2.0/System.CodeDom.xml",
+        "system.codedom.4.4.0.nupkg.sha512",
+        "system.codedom.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Arcane.Axl/1.0.0": {
+      "type": "project",
+      "path": "../Arcane.Axl/Arcane.Axl.csproj",
+      "msbuildProject": "../Arcane.Axl/Arcane.Axl.csproj"
+    },
+    "Arcane.Axl.T4/1.0.0": {
+      "type": "project",
+      "path": "../Arcane.Axl.T4/Arcane.Axl.T4.csproj",
+      "msbuildProject": "../Arcane.Axl.T4/Arcane.Axl.T4.csproj"
+    },
+    "Axlstar.Axl2cc/1.0.0": {
+      "type": "project",
+      "path": "../Axlstar.Axl2cc/Axlstar.Axl2cc.csproj",
+      "msbuildProject": "../Axlstar.Axl2cc/Axlstar.Axl2cc.csproj"
+    },
+    "Axlstar.Axl2ccT4/1.0.0": {
+      "type": "project",
+      "path": "../Axlstar.Axl2ccT4/Axlstar.Axl2ccT4.csproj",
+      "msbuildProject": "../Axlstar.Axl2ccT4/Axlstar.Axl2ccT4.csproj"
+    },
+    "Axlstar.AxlCopy/1.0.0": {
+      "type": "project",
+      "path": "../Axlstar.AxlCopy/Axlstar.AxlCopy.csproj",
+      "msbuildProject": "../Axlstar.AxlCopy/Axlstar.AxlCopy.csproj"
+    },
+    "Axlstar.AxlDoc/1.0.0": {
+      "type": "project",
+      "path": "../Axlstar.AxlDoc/Axlstar.AxlDoc.csproj",
+      "msbuildProject": "../Axlstar.AxlDoc/Axlstar.AxlDoc.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "Arcane.Axl >= 1.0.0",
+      "Axlstar.Axl2cc >= 1.0.0",
+      "Axlstar.Axl2ccT4 >= 1.0.0",
+      "Axlstar.AxlCopy >= 1.0.0",
+      "Axlstar.AxlDoc >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/work/zhaoy/Bureau/framework/build_release/axlstar_obj/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/work/zhaoy/Bureau/framework/axlstar/Axlstar.Driver/Axlstar.Driver.csproj",
+      "projectName": "Axlstar.Driver",
+      "projectPath": "/work/zhaoy/Bureau/framework/axlstar/Axlstar.Driver/Axlstar.Driver.csproj",
+      "packagesPath": "/work/zhaoy/Bureau/framework/build_release/axlstar_obj/packages/",
+      "outputPath": "/work/zhaoy/Bureau/framework/build_release/axlstar_obj/obj//Axlstar.Driver/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/work/zhaoy/Bureau/framework/nuget.config",
+        "/work/zhaoy/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp6.0"
+      ],
+      "sources": {
+        "/work/zhaoy/Bureau/framework/dependencies/nuget_fallback": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "netcoreapp6.0",
+          "projectReferences": {
+            "/work/zhaoy/Bureau/framework/axlstar/Arcane.Axl/Arcane.Axl.csproj": {
+              "projectPath": "/work/zhaoy/Bureau/framework/axlstar/Arcane.Axl/Arcane.Axl.csproj"
+            },
+            "/work/zhaoy/Bureau/framework/axlstar/Axlstar.Axl2cc/Axlstar.Axl2cc.csproj": {
+              "projectPath": "/work/zhaoy/Bureau/framework/axlstar/Axlstar.Axl2cc/Axlstar.Axl2cc.csproj"
+            },
+            "/work/zhaoy/Bureau/framework/axlstar/Axlstar.Axl2ccT4/Axlstar.Axl2ccT4.csproj": {
+              "projectPath": "/work/zhaoy/Bureau/framework/axlstar/Axlstar.Axl2ccT4/Axlstar.Axl2ccT4.csproj"
+            },
+            "/work/zhaoy/Bureau/framework/axlstar/Axlstar.AxlCopy/Axlstar.AxlCopy.csproj": {
+              "projectPath": "/work/zhaoy/Bureau/framework/axlstar/Axlstar.AxlCopy/Axlstar.AxlCopy.csproj"
+            },
+            "/work/zhaoy/Bureau/framework/axlstar/Axlstar.AxlDoc/Axlstar.AxlDoc.csproj": {
+              "projectPath": "/work/zhaoy/Bureau/framework/axlstar/Axlstar.AxlDoc/Axlstar.AxlDoc.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "netcoreapp6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/soft/irsrvsoft1/expl/eb/r11/el_9-x86_64/easybuild/software/dotNET-SDK/6.0.101-GCCcore-11.2.0-linux-x64/sdk/6.0.101/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

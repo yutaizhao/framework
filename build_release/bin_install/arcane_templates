@@ -1,0 +1,8 @@
+#!/bin/sh
+# This script is in the subdirectory 'bin' of the Arcane root path
+# Parent directory of that directory is the root path of Arcane
+THAT_DIR=$(X= cd -- "$(dirname -- "$0")" && pwd -P)
+ARCANE_ROOT=$(dirname ${THAT_DIR})
+export ARCANE_ROOT
+LD_LIBRARY_PATH=${ARCANE_ROOT}/lib:${LD_LIBRARY_PATH}
+/soft/irsrvsoft1/expl/eb/r11/el_9-x86_64/easybuild/software/dotNET-SDK/6.0.101-GCCcore-11.2.0-linux-x64/dotnet  ${ARCANE_ROOT}/lib/dotnet/Arcane.UnifiedDriver.dll template "$@"

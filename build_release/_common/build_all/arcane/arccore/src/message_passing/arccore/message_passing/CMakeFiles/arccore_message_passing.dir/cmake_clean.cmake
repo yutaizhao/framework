@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "../../../../../../../../lib/libarccore_message_passing.pdb"
+  "../../../../../../../../lib/libarccore_message_passing.so"
+  "CMakeFiles/arccore_message_passing.dir/BasicSerializeMessage.cc.o"
+  "CMakeFiles/arccore_message_passing.dir/BasicSerializeMessage.cc.o.d"
+  "CMakeFiles/arccore_message_passing.dir/Communicator.cc.o"
+  "CMakeFiles/arccore_message_passing.dir/Communicator.cc.o.d"
+  "CMakeFiles/arccore_message_passing.dir/Dispatchers.cc.o"
+  "CMakeFiles/arccore_message_passing.dir/Dispatchers.cc.o.d"
+  "CMakeFiles/arccore_message_passing.dir/GatherMessageInfo.cc.o"
+  "CMakeFiles/arccore_message_passing.dir/GatherMessageInfo.cc.o.d"
+  "CMakeFiles/arccore_message_passing.dir/MessageId.cc.o"
+  "CMakeFiles/arccore_message_passing.dir/MessageId.cc.o.d"
+  "CMakeFiles/arccore_message_passing.dir/MessagePassingGlobal.cc.o"
+  "CMakeFiles/arccore_message_passing.dir/MessagePassingGlobal.cc.o.d"
+  "CMakeFiles/arccore_message_passing.dir/MessagePassingMng.cc.o"
+  "CMakeFiles/arccore_message_passing.dir/MessagePassingMng.cc.o.d"
+  "CMakeFiles/arccore_message_passing.dir/MessageRank.cc.o"
+  "CMakeFiles/arccore_message_passing.dir/MessageRank.cc.o.d"
+  "CMakeFiles/arccore_message_passing.dir/MessageTag.cc.o"
+  "CMakeFiles/arccore_message_passing.dir/MessageTag.cc.o.d"
+  "CMakeFiles/arccore_message_passing.dir/Messages.cc.o"
+  "CMakeFiles/arccore_message_passing.dir/Messages.cc.o.d"
+  "CMakeFiles/arccore_message_passing.dir/PointToPointMessageInfo.cc.o"
+  "CMakeFiles/arccore_message_passing.dir/PointToPointMessageInfo.cc.o.d"
+  "CMakeFiles/arccore_message_passing.dir/PointToPointSerializerMng.cc.o"
+  "CMakeFiles/arccore_message_passing.dir/PointToPointSerializerMng.cc.o.d"
+  "CMakeFiles/arccore_message_passing.dir/Request.cc.o"
+  "CMakeFiles/arccore_message_passing.dir/Request.cc.o.d"
+  "CMakeFiles/arccore_message_passing.dir/RequestListBase.cc.o"
+  "CMakeFiles/arccore_message_passing.dir/RequestListBase.cc.o.d"
+  "CMakeFiles/arccore_message_passing.dir/SerializeMessageList.cc.o"
+  "CMakeFiles/arccore_message_passing.dir/SerializeMessageList.cc.o.d"
+  "CMakeFiles/arccore_message_passing.dir/Stat.cc.o"
+  "CMakeFiles/arccore_message_passing.dir/Stat.cc.o.d"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/arccore_message_passing.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

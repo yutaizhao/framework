@@ -1,0 +1,21 @@
+﻿{
+    "CodeBinPath" : "/usr/local/bin",
+    "CodeLibPath" : "/usr/local/lib",
+    "CodeSharePath" : "/usr/local/share",
+    "MpiBinary" : "/soft/irsrvsoft1/expl/eb/r11/el_9-x86_64/easybuild/software/impi/2021.4.0-GCC-11.2.0/mpi/2021.4.0/bin/mpiexec",
+    "CustomMpiDriver" : "",
+    "ValgrindBinary" : "/usr/bin/valgrind",
+    "MonoExecPath" : "/soft/irsrvsoft1/expl/eb/r11/el_9-x86_64/easybuild/software/Mono/6.12.0.122-GCCcore-11.2.0/bin",
+    "DotnetCoreClrPath" : "/soft/irsrvsoft1/expl/eb/r11/el_9-x86_64/easybuild/software/dotNET-SDK/6.0.101-GCCcore-11.2.0-linux-x64/dotnet",
+    "DotnetCoreClrVersion" : "6.0",
+    "DotnetCoreClrFullVersion" : "6.0.101",
+    "DotnetCoreClrSdkPath" : "/soft/irsrvsoft1/expl/eb/r11/el_9-x86_64/easybuild/software/dotNET-SDK/6.0.101-GCCcore-11.2.0-linux-x64/sdk/6.0.101",
+    "ExternalLibraries" : "pthread",
+    "DefaultMeshWriter" : "",
+    "Config_MPIEXEC" : "/soft/irsrvsoft1/expl/eb/r11/el_9-x86_64/easybuild/software/impi/2021.4.0-GCC-11.2.0/mpi/2021.4.0/bin/mpiexec",
+    "Config_MPIEXEC_NUMPROC_FLAG" : "-n",
+    "Config_MPIEXEC_PREFLAGS" : "",
+    "Config_MPIEXEC_POSTFLAGS" : "",
+    "Config_MPI_VENDOR_NAME" : "mpich"
+}
+

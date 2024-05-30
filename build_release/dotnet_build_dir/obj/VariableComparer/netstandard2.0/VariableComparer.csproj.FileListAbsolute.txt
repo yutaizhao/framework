@@ -1,0 +1,10 @@
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/VariableComparer/netstandard2.0/VariableComparer.deps.json
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/VariableComparer/netstandard2.0/VariableComparer.dll
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/VariableComparer/netstandard2.0/VariableComparer.pdb
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/VariableComparer/netstandard2.0/VariableComparer.csproj.AssemblyReference.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/VariableComparer/netstandard2.0/VariableComparer.GeneratedMSBuildEditorConfig.editorconfig
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/VariableComparer/netstandard2.0/VariableComparer.AssemblyInfoInputs.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/VariableComparer/netstandard2.0/VariableComparer.AssemblyInfo.cs
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/VariableComparer/netstandard2.0/VariableComparer.csproj.CoreCompileInputs.cache
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/VariableComparer/netstandard2.0/VariableComparer.dll
+/work/zhaoy/Bureau/framework/build_release/dotnet_build_dir/obj/VariableComparer/netstandard2.0/VariableComparer.pdb
