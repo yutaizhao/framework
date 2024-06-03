@@ -52,6 +52,22 @@ MeshMaterialVariableIndexer(ITraceMng* tm, const String& name)
 /*---------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------*/
 
+MeshMaterialVariableIndexer::
+MeshMaterialVariableIndexer(const MeshMaterialVariableIndexer& rhs)
+: TraceAccessor(rhs)
+, m_index(rhs.m_index)
+, m_max_index_in_multiple_array(rhs.m_max_index_in_multiple_array)
+, m_name(rhs.m_name)
+, m_cells(rhs.m_cells)
+, m_matvar_indexes(rhs.m_matvar_indexes)
+, m_local_ids(rhs.m_local_ids)
+{
+  _init();
+}
+
+/*---------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------*/
+
 /*---------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------*/
 
@@ -91,7 +107,7 @@ endUpdate(const ComponentItemListBuilderOld& builder)
     }
   }
 
-  // NOTE: a priori, ici on est sur que m_max_index_in_multiple_array vaut
+  // NOTE: a priori, ici on est sur que m_max_index_in_multiple array vaut
   // nb_partial+1
   {
     Int32 max_index_in_multiple = (-1);

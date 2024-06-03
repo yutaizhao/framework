@@ -165,6 +165,7 @@ add_subdirectory(modules/hpddm)
 add_subdirectory(modules/ifpen_solvers)
 add_subdirectory(modules/arcane_tools)
 add_subdirectory(modules/interface_c)
+add_subdirectory(modules/logger)
 
 message_separator()
 logStatus("Loading tests...")

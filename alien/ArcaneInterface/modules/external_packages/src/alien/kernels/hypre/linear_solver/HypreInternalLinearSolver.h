@@ -9,7 +9,7 @@
 #define ALIEN_KERNELS_HYPRE_LINEARSOLVER_HYPREINTERNALLINEARSOLVER_H
 
 #include <memory>
-
+#include <alien/Logger/Logger.h>
 #include <alien/utils/Precomp.h>
 #include <alien/expression/solver/SolverStat.h>
 #include <alien/core/backend/IInternalLinearSolverT.h>
@@ -91,6 +91,7 @@ class HypreInternalLinearSolver : public IInternalLinearSolver<HypreMatrix, Hypr
   SolverStat m_stat;
   Arccore::MessagePassing::IMessagePassingMng* m_parallel_mng;
   IOptionsHypreSolver* m_options;
+  std::unique_ptr<ILogger> m_logger;
 
  private:
   void checkError(const Arccore::String& msg, int ierr, int skipError = 0) const;

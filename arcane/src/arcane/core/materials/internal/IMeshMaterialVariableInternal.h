@@ -14,9 +14,8 @@
 /*---------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------*/
 
-#include "arcane/core/ItemTypes.h"
+#include "arcane/ItemTypes.h"
 #include "arcane/core/materials/MaterialsCoreGlobal.h"
-#include "arcane/accelerator/core/RunQueue.h"
 
 /*---------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------*/
@@ -30,15 +29,15 @@ class ComponentItemListBuilder;
 /*!
  * \brief Arguments des méthodes de copie entre valeurs partielles et globales
  */
-class ARCANE_CORE_EXPORT CopyBetweenPartialAndGlobalArgs
+class ARCANE_CORE_EXPORT MeshVariableCopyBetweenPartialAndGlobalArgs
 {
  public:
 
-  CopyBetweenPartialAndGlobalArgs(Int32 var_index,
-                                  SmallSpan<const Int32> local_ids,
-                                  SmallSpan<const Int32> indexes_in_multiple,
-                                  bool do_copy,
-                                  const RunQueue& queue)
+  MeshVariableCopyBetweenPartialAndGlobalArgs(Int32 var_index,
+                                              SmallSpan<const Int32> local_ids,
+                                              SmallSpan<const Int32> indexes_in_multiple,
+                                              bool do_copy,
+                                              RunQueue* queue)
   : m_var_index(var_index)
   , m_local_ids(local_ids)
   , m_indexes_in_multiple(indexes_in_multiple)
@@ -52,7 +51,7 @@ class ARCANE_CORE_EXPORT CopyBetweenPartialAndGlobalArgs
   SmallSpan<const Int32> m_local_ids;
   SmallSpan<const Int32> m_indexes_in_multiple;
   bool m_do_copy_between_partial_and_pure = true;
-  RunQueue m_queue;
+  RunQueue* m_queue = nullptr;
 };
 
 /*---------------------------------------------------------------------------*/
@@ -104,10 +103,10 @@ class ARCANE_CORE_EXPORT IMeshMaterialVariableInternal
                            Integer data_index, Int32ConstArrayView ids, bool allow_null_id) = 0;
 
   //! \internal
-  virtual void copyGlobalToPartial(const CopyBetweenPartialAndGlobalArgs& args) = 0;
+  virtual void copyGlobalToPartial(const MeshVariableCopyBetweenPartialAndGlobalArgs& args) = 0;
 
   //! \internal
-  virtual void copyPartialToGlobal(const CopyBetweenPartialAndGlobalArgs& args) = 0;
+  virtual void copyPartialToGlobal(const MeshVariableCopyBetweenPartialAndGlobalArgs& args) = 0;
 
   //! \internal
   virtual void initializeNewItems(const ComponentItemListBuilder& list_builder, RunQueue& queue) = 0;

@@ -237,7 +237,7 @@ using Arcane::Accelerator::isAcceleratorPolicy;
  * Lève une exception FatalErrorException si ce n'est pas le cas.
  */
 extern "C++" ARCANE_ACCELERATOR_CORE_EXPORT void
-arcaneCheckPointerIsAccessible(const RunQueue* queue, const void* ptr,
+arcaneCheckPointerIsAccessible(RunQueue* queue, const void* ptr,
                                const char* name, const TraceInfo& ti);
 
 /*!
@@ -246,7 +246,7 @@ arcaneCheckPointerIsAccessible(const RunQueue* queue, const void* ptr,
  * Lève une exception FatalErrorException si ce n'est pas le cas.
  */
 extern "C++" ARCANE_ACCELERATOR_CORE_EXPORT void
-arcaneCheckPointerIsAccessible(const Runner* runner, const void* ptr,
+arcaneCheckPointerIsAccessible(Runner* runner, const void* ptr,
                                const char* name, const TraceInfo& ti);
 
 /*!
@@ -258,18 +258,11 @@ extern "C++" ARCANE_ACCELERATOR_CORE_EXPORT void
 arcaneCheckPointerIsAccessible(eExecutionPolicy policy, const void* ptr,
                                const char* name, const TraceInfo& ti);
 
-inline void
-arcaneCheckPointerIsAccessible(const RunQueue& queue, const void* ptr,
+template <typename T> inline void
+arcaneCheckPointerIsAccessible(T& queue_or_runner, const void* ptr,
                                const char* name, const TraceInfo& ti)
 {
-  arcaneCheckPointerIsAccessible(&queue, ptr, name, ti);
-}
-
-inline void
-arcaneCheckPointerIsAccessible(const Runner& runner, const void* ptr,
-                               const char* name, const TraceInfo& ti)
-{
-  arcaneCheckPointerIsAccessible(&runner, ptr, name, ti);
+  arcaneCheckPointerIsAccessible(&queue_or_runner, ptr, name, ti);
 }
 
 } // namespace Arcane::Accelerator::impl

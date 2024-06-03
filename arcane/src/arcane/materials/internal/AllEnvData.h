@@ -32,7 +32,7 @@
 
 namespace Arcane::Materials
 {
-class CopyBetweenPartialAndGlobalArgs;
+class MeshVariableCopyBetweenPartialAndGlobalArgs;
 
 /*---------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------*/
@@ -44,10 +44,6 @@ class AllEnvData
 : public TraceAccessor
 {
   friend class IncrementalComponentModifier;
-
- public:
-
-  class RecomputeConstituentCellInfos;
 
  public:
 
@@ -87,7 +83,7 @@ class AllEnvData
  private:
 
   void _computeNbEnvAndNbMatPerCell();
-  void _copyBetweenPartialsAndGlobals(const CopyBetweenPartialAndGlobalArgs& args,
+  void _copyBetweenPartialsAndGlobals(const MeshVariableCopyBetweenPartialAndGlobalArgs& args,
                                       bool is_add_operation);
   void _computeAndResizeEnvItemsInternal();
   bool _isFullVerbose() const;
@@ -99,8 +95,7 @@ class AllEnvData
 
  public:
 
-  void _computeInfosForAllEnvCells(RecomputeConstituentCellInfos& work_info);
-  void _computeInfosForEnvCells(RecomputeConstituentCellInfos& work_info);
+  void _computeInfosForEnvCells();
 };
 
 /*---------------------------------------------------------------------------*/
