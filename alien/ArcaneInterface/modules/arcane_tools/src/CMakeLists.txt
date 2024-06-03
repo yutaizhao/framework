@@ -14,7 +14,6 @@ addSources(alien_arcane_tools
   alien/arcane_tools/indexManager/AnyItemAbstractFamily.cc
   alien/arcane_tools/block/BlockBuilder.cc
   alien/arcane_tools/block/BlockSizes.cc
-  alien/arcane_tools/Logger/Logger.cc
   )
 
 IF(ALIEN_USE_SYCL)

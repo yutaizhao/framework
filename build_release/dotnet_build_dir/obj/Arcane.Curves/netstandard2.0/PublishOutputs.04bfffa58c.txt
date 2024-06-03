@@ -1,5 +1,0 @@
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.Curves.dll
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.Curves.deps.json
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.Curves.pdb
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.Utils.dll
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.Utils.pdb

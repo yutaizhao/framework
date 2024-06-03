@@ -1,3 +1,0 @@
-/work/zhaoy/Bureau/framework/build_release/bin/axlstar_dlls/Arcane.Axl.dll
-/work/zhaoy/Bureau/framework/build_release/bin/axlstar_dlls/Arcane.Axl.deps.json
-/work/zhaoy/Bureau/framework/build_release/bin/axlstar_dlls/Arcane.Axl.pdb

@@ -64,7 +64,6 @@ HypreInternalLinearSolver::HypreInternalLinearSolver(
     Arccore::MessagePassing::IMessagePassingMng* pm, IOptionsHypreSolver* options)
 : m_parallel_mng(pm)
 , m_options(options)
-, m_logger(nullptr)
 {
 }
 
@@ -72,8 +71,7 @@ HypreInternalLinearSolver::HypreInternalLinearSolver(
 
 HypreInternalLinearSolver::~HypreInternalLinearSolver()
 {
-   if(m_logger)
-    m_logger->report();
+  ;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -81,20 +79,6 @@ HypreInternalLinearSolver::~HypreInternalLinearSolver()
 void
 HypreInternalLinearSolver::init()
 {
-  if(m_options->logger().size() && m_logger==nullptr)
-    m_logger.reset(m_options->logger()[0]);
-  if(m_logger)
-  {
-    m_logger->log("package",this->getBackEndName());
-    m_logger->start(eStep::init);
-    std::ostringstream oss;
-    oss << m_options->numIterationsMax();
-    m_logger->log("max-it", oss.str());
-    oss.str(std::string());
-    oss << m_options->stopCriteriaValue();
-    m_logger->log("tol", oss.str());
-    m_logger->stop(eStep::init);
-  }
   if(HypreInternalLinearSolver::m_library_plugin_is_initialized) return ;
 #ifdef HYPRE_USING_CUDA
   if(m_options->useGpu() )
@@ -144,8 +128,7 @@ HypreInternalLinearSolver::updateParallelMng(
 void
 HypreInternalLinearSolver::end()
 {
-   if(m_logger)
-    m_logger->report();
+  ;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -169,9 +152,6 @@ bool
 HypreInternalLinearSolver::solve(
     const HypreMatrix& A, const HypreVector& b, HypreVector& x)
 {
-   if(m_logger)
-     m_logger->start(eStep::solve);
-    
   using namespace Alien;
   using namespace Alien::Internal;
 
@@ -306,10 +286,6 @@ HypreInternalLinearSolver::solve(
     alien_fatal([&] { cout() << "Undefined Hypre preconditioner option"; });
     break;
   }
-  
- if(m_logger)
-    m_logger->log("precond",precond_name);
-  
 
   // acces aux fonctions du solveur
   // int (*solver_set_logging_function)(HYPRE_Solver,int) = NULL;
@@ -431,9 +407,6 @@ HypreInternalLinearSolver::solve(
     alien_fatal([&] { cout() << "Undefined solver option"; });
     break;
   }
-  
- if(m_logger)
-    m_logger->log("solver",solver_name);
 
   if (solver_set_precond_function) {
     if (precond_solve_function) {
@@ -482,9 +455,7 @@ HypreInternalLinearSolver::solve(
   if (precond_destroy_function)
     checkError("Hypre " + precond_name + " preconditioner Destroy",
         (*precond_destroy_function)(preconditioner));
-  
-  if(m_logger)
-    m_logger->stop(eStep::solve, m_status);
+
   return m_status.succeeded;
 
 #undef VALUESTRING

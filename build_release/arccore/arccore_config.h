@@ -1,7 +1,0 @@
-#define ARCCORE_TYPE_INT16 std::int16_t
-#define ARCCORE_TYPE_INT32 std::int32_t
-#define ARCCORE_TYPE_INT64 std::int64_t
-#define ARCCORE_INT32_MAX INT32_MAX
-#define ARCCORE_INT64_MAX INT64_MAX
-/* #undef ARCCORE_DEBUG */
-/* #undef ARCCORE_CHECK */

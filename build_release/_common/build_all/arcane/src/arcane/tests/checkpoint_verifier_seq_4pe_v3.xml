@@ -1,6 +1,0 @@
-<?xml version="1.0" ?>
-<commands>
-  <test>-m 5 /work/zhaoy/Bureau/framework/arcane/tests/testCheckpoint-verifier-write.arc</test>
-  <test>-n 4 -m 5 /work/zhaoy/Bureau/framework/arcane/tests/testCheckpoint-verifier-read.arc</test>
-  <driver>compare checkpoint-test-verifier-file checkpoint-test-verifier-file</driver>
-</commands>

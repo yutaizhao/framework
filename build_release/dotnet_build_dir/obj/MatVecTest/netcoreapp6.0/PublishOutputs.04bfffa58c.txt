@@ -1,9 +1,0 @@
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/MatVecTest
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/MatVecTest.dll
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/MatVecTest.deps.json
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/MatVecTest.runtimeconfig.json
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/MatVecTest.pdb
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.MatVec.dll
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.Utils.dll
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.Utils.pdb
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.MatVec.pdb

@@ -1,8 +1,0 @@
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.Templates.dll
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.Templates.deps.json
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.Templates.pdb
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Microsoft.CSharp.dll
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Mono.Options.dll
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Scriban.dll
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/System.Runtime.CompilerServices.Unsafe.dll
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/System.Threading.Tasks.Extensions.dll

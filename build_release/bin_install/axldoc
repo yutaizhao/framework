@@ -1,2 +1,0 @@
-#!/bin/sh
-"/soft/irsrvsoft1/expl/eb/r11/el_9-x86_64/easybuild/software/dotNET-SDK/6.0.101-GCCcore-11.2.0-linux-x64/dotnet"  "/usr/local/bin/axlstar_dlls/Axlstar.Driver.dll" axldoc "$@"

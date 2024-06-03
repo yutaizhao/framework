@@ -1,5 +1,0 @@
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.MatVec.dll
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.MatVec.deps.json
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.MatVec.pdb
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.Utils.dll
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.Utils.pdb

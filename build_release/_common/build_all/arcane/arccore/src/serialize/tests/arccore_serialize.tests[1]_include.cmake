@@ -1,5 +1,0 @@
-if(EXISTS "/work/zhaoy/Bureau/framework/build_release/_common/build_all/arcane/arccore/src/serialize/tests/arccore_serialize.tests[1]_tests.cmake")
-  include("/work/zhaoy/Bureau/framework/build_release/_common/build_all/arcane/arccore/src/serialize/tests/arccore_serialize.tests[1]_tests.cmake")
-else()
-  add_test(arccore_serialize.tests_NOT_BUILT arccore_serialize.tests_NOT_BUILT)
-endif()

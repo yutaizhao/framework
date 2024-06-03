@@ -1,3 +1,0 @@
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.Compiler.Directives.dll
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.Compiler.Directives.deps.json
-/work/zhaoy/Bureau/framework/build_release/lib/dotnet/Arcane.Compiler.Directives.pdb
