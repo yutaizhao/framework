@@ -67,8 +67,6 @@
 #include <arccore/serialize/BasicSerializer.h>
 #include <arccore/serialize/ISerializer.h>
 
-#include <arccore/trace/ITraceMng.h>
-
 #include <alien/utils/arccore/AlienTypes.h>
 
 /*---------------------------------------------------------------------------*/
