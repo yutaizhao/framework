@@ -1,6 +1,7 @@
 #ifndef ALIEN_KERNELS_MTL_LINEARSOLVER_MTLINTERNALLINEARSOLVER_H_
 #define ALIEN_KERNELS_MTL_LINEARSOLVER_MTLINTERNALLINEARSOLVER_H_
 
+#include <alien/Logger/Logger.h>
 #include <alien/utils/Precomp.h>
 #include <alien/expression/solver/SolverStat.h>
 #include <alien/core/backend/IInternalLinearSolverT.h>
@@ -93,6 +94,8 @@ class MTLInternalLinearSolver : public IInternalLinearSolver<MTLMatrix, MTLVecto
   SolverStat m_stat;
 
   IOptionsMTLLinearSolver* m_options = nullptr;
+  std::unique_ptr<ILogger> m_logger;
+
 };
 
 } // namespace Alien

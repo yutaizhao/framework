@@ -4,7 +4,7 @@
 #include <alien/AlienExternalPackagesPrecomp.h>
 #include <alien/kernels/mtl/MTLPrecomp.h>
 #include <alien/kernels/mtl/linear_solver/MTLInternalLinearSolver.h>
-
+#include <alien/Logger/ILogger.h>
 #include <alien/kernels/mtl/MTLBackEnd.h>
 #include <alien/core/backend/LinearSolver.h>
 

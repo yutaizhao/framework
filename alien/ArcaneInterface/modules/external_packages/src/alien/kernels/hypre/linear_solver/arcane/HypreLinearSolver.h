@@ -5,7 +5,7 @@
 #include <alien/AlienExternalPackagesPrecomp.h>
 #include <alien/kernels/hypre/HypreBackEnd.h>
 #include <alien/core/backend/LinearSolver.h>
-#include <alien/Logger/Logger.h>
+#include <alien/Logger/ILogger.h>
 
 #include <alien/kernels/hypre/linear_solver/HypreOptionTypes.h>
 #include <ALIEN/axl/HypreSolver_axl.h>
