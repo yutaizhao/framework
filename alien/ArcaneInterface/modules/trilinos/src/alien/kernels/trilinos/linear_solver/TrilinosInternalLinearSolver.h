@@ -8,6 +8,7 @@
 #define ALIEN_KERNELS_TRILINOS_LINEARSOLVER_TRILINOSINTERNALLINEARSOLVER_H
 
 #include "alien/kernels/trilinos/linear_solver/belos_solver_fabric.h"
+#include <alien/Logger/ILogger.h>
 
 #include <alien/utils/Precomp.h>
 #include <alien/AlienTrilinosPrecomp.h>
@@ -15,6 +16,7 @@
 #include <alien/expression/solver/SolverStat.h>
 #include <alien/core/backend/IInternalLinearSolverT.h>
 #include <alien/utils/ObjectWithTrace.h>
+
 #include <alien/kernels/trilinos/data_structure/TrilinosVector.h>
 #include <alien/kernels/trilinos/data_structure/TrilinosMatrix.h>
 
@@ -44,7 +46,11 @@ class ALIEN_TRILINOS_EXPORT TrilinosInternalLinearSolver
       IOptionsTrilinosSolver* options = nullptr);
 
   /** Destructeur de la classe */
-  virtual ~TrilinosInternalLinearSolver() {}
+  virtual ~TrilinosInternalLinearSolver()
+  {
+    if(m_logger)
+      m_logger->report();
+  }
 
  public:
   //! Initialisation
@@ -133,6 +139,7 @@ class ALIEN_TRILINOS_EXPORT TrilinosInternalLinearSolver
 
   IOptionsTrilinosSolver* m_options = nullptr;
   std::vector<double> m_pressure_diag;
+  std::unique_ptr<ILogger> m_logger;
 };
 
 } // namespace Alien

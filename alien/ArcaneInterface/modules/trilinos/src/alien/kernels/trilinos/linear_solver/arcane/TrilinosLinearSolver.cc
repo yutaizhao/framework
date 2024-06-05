@@ -12,6 +12,7 @@
 #include <alien/kernels/trilinos/data_structure/TrilinosInternal.h>
 #include <alien/kernels/trilinos/data_structure/TrilinosMatrix.h>
 #include <alien/kernels/trilinos/data_structure/TrilinosVector.h>
+#include <alien/Logger/ILogger.h>
 
 #include <alien/kernels/trilinos/linear_solver/TrilinosOptionTypes.h>
 #include <ALIEN/axl/TrilinosSolver_StrongOptions.h>
