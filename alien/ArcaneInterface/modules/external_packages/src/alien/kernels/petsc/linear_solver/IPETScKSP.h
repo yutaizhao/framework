@@ -10,6 +10,7 @@
 
 #include <alien/data/Space.h>
 #include <alien/distribution/MatrixDistribution.h>
+#include <alien/Logger/ILogger.h>
 
 /*---------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------*/
@@ -36,7 +37,7 @@ class IPETScKSP
  public:
   //! Initialisation
   virtual void configure(
-      KSP& ksp, const ISpace& space, const MatrixDistribution& distribution) = 0;
+			 KSP& ksp, const ISpace& space, const MatrixDistribution& distribution, ILogger* logger) = 0;
 };
 
 /*---------------------------------------------------------------------------*/

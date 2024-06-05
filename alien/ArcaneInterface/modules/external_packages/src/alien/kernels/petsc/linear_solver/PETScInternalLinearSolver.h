@@ -7,7 +7,7 @@
 #pragma once
 
 #include <alien/AlienExternalPackagesPrecomp.h>
-
+#include <alien/Logger/ILogger.h>
 #include <alien/core/backend/IInternalLinearSolverT.h>
 #include <alien/expression/solver/SolverStat.h>
 #include <alien/utils/ObjectWithTrace.h>
@@ -165,6 +165,8 @@ class PETScInternalLinearSolver : public IInternalLinearSolver<PETScMatrix, PETS
   SolverStat m_stat;
 
   IOptionsPETScLinearSolver* m_options;
+  std::unique_ptr<ILogger> m_logger;
+
 };
 
 /*---------------------------------------------------------------------------*/

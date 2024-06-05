@@ -96,13 +96,17 @@ PETScInternalLinearSolver::PETScInternalLinearSolver(
 , m_null_space_constant_opt(false)
 , m_parallel_mng(parallel_mng)
 , m_options(options)
+, m_logger(nullptr)
 {
+  ;
 }
 
 /*---------------------------------------------------------------------------*/
 
 PETScInternalLinearSolver::~PETScInternalLinearSolver()
 {
+  if(m_logger)
+    m_logger->report();
 }
 
 /*---------------------------------------------------------------------------*/
@@ -114,7 +118,12 @@ PETScInternalLinearSolver::init(int argc, char** argv)
     return;
   // m_stater.reset();
   // m_stater.startInitializationMeasure();
-
+  if(m_options->logger().size() && m_logger == nullptr)
+  {
+    m_logger.reset(m_options->logger()[0]);
+    m_logger->log("package",this->getBackEndName());
+    m_logger->start(eStep::init);
+  }
   if (not m_global_initialized) {
     std::vector<std::string> petsc_options;
     if (m_options->traceInfo()) {
@@ -175,7 +184,8 @@ PETScInternalLinearSolver::init(int argc, char** argv)
       });
     }
   }
-
+ if(m_logger)
+    m_logger->stop(eStep::init);
   // m_stater.stopInitializationMeasure();
 }
 
@@ -188,7 +198,13 @@ PETScInternalLinearSolver::init()
     return;
   // m_stater.reset();
   // m_stater.startInitializationMeasure();
-
+  if(m_options->logger().size() && m_logger == nullptr)
+  {
+    m_logger.reset(m_options->logger()[0]);
+    m_logger->log("package",this->getBackEndName());
+    m_logger->start(eStep::init);
+  }
+  
   if (not m_global_initialized) {
     std::vector<Arccore::String> petsc_options;
     if (m_options->traceInfo()) {
@@ -251,6 +267,8 @@ PETScInternalLinearSolver::init()
   m_null_space_constant_opt = m_options->nullSpaceConstantOpt() ;
   m_nearnull_space_opt = m_options->nearnullSpaceOpt() ;
   // m_stater.stopInitializationMeasure();
+  if(m_logger)
+    m_logger->stop(eStep::init);
 }
 
 /*---------------------------------------------------------------------------*/
@@ -371,7 +389,7 @@ PETScInternalLinearSolver::solve(
         cout()<<"START KSP CONFIGURE";
       }) ;
   }
-  m_options->solver()->configure(ksp, matrix.rowSpace(), matrix.distribution());
+  m_options->solver()->configure(ksp, matrix.rowSpace(), matrix.distribution(), m_logger.get());
   if (m_verbose == VerboseTypes::high ) {
       alien_info([&] {
         cout()<<"KSP IS CONFIGURED";
@@ -428,7 +446,8 @@ PETScInternalLinearSolver::solve(
         vf, (PetscErrorCode(*)(void**))PetscViewerAndFormatDestroy);
 #endif
   }
-
+  if(m_logger)
+    m_logger->start(eStep::solve);
   checkError("Solver solve", KSPSolve(ksp, b, x));
 
   KSPConvergedReason ksp_reason;
@@ -469,6 +488,9 @@ PETScInternalLinearSolver::solve(
   if (m_verbose != VerboseTypes::low) {
     internalPrintInfo();
   }
+  if(m_logger)
+    m_logger->stop(eStep::solve, m_status);
+  
   return m_status.succeeded;
 }
 

@@ -43,8 +43,10 @@ PETScPrecConfigSuperLUService::PETScPrecConfigSuperLUService(
 //! Initialisation
 void
 PETScPrecConfigSuperLUService::configure(
-    PC& pc, const ISpace& space, const MatrixDistribution& distribution)
+					 PC& pc, const ISpace& space, const MatrixDistribution& distribution, ILogger* logger)
 {
+  if(logger)
+    logger->log("precond","superlu");
   alien_debug([&] { cout() << "configure PETSc superlu preconditioner"; });
   checkError("Set preconditioner", PCSetType(pc, PCLU));
 

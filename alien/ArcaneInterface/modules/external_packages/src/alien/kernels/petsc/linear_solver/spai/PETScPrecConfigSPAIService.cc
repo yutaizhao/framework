@@ -37,8 +37,10 @@ PETScPrecConfigSPAIService::PETScPrecConfigSPAIService(
 void
 PETScPrecConfigSPAIService::configure([[maybe_unused]] PC& pc,
                                       [[maybe_unused]] const ISpace& space,
-                                      [[maybe_unused]] const MatrixDistribution& distribution)
+                                      [[maybe_unused]] const MatrixDistribution& distribution, ILogger* logger)
 {
+  if(logger)
+    logger->log("precond","spai");
   alien_fatal([&] { cout() << "configure SPAI not available need to be checked"; });
 }
 

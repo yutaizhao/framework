@@ -41,7 +41,7 @@ PETScPrecConfigHypreService::PETScPrecConfigHypreService(
 
 void
 PETScPrecConfigHypreService::configure(PC& pc, [[maybe_unused]] const ISpace& space,
-                                       [[maybe_unused]] const MatrixDistribution& distribution)
+                                       [[maybe_unused]] const MatrixDistribution& distribution, ILogger* logger)
 {
   alien_debug([&] { cout() << "configure PETSc hypre preconditioner"; });
   // if(options()->fieldSplitMode())
@@ -53,6 +53,8 @@ PETScPrecConfigHypreService::configure(PC& pc, [[maybe_unused]] const ISpace& sp
   switch (options()->type()) {
   case PETScPrecConfigHypreOptions::PILUT:
     checkError("Set Hypre preconditioner", PCHYPRESetType(pc, "pilut"));
+    if(logger)
+      logger->log("precond","hypre-pilut");
     break;
   case PETScPrecConfigHypreOptions::AMG:
     checkError("Set Hypre preconditioner", PCHYPRESetType(pc, "boomeramg"));
@@ -68,6 +70,8 @@ PETScPrecConfigHypreService::configure(PC& pc, [[maybe_unused]] const ISpace& sp
     // Default option is reversed in PETSc (CF-Relaxation is default)
     // checkError("Set Hypre Relax order", PetscOptionsSetValue(NULL,
     // "-pc_hypre_boomeramg_CF","1"));
+    if(logger)
+      logger->log("precond","hypre-amg");
     break ;
   case PETScPrecConfigHypreOptions::AMGN:
     /*
@@ -113,12 +117,18 @@ PETScPrecConfigHypreService::configure(PC& pc, [[maybe_unused]] const ISpace& sp
       // Default option is reversed in PETSc (CF-Relaxation is default)
       // checkError("Set Hypre Relax order", PetscOptionsSetValue(NULL,"-pc_hypre_boomeramg_CF","1"));
     }
+    if(logger)
+      logger->log("precond","hypre-amgn");
     break;
   case PETScPrecConfigHypreOptions::ParaSails:
     checkError("Set Hypre preconditioner", PCHYPRESetType(pc, "parasails"));
+    if(logger)
+      logger->log("precond","hypre-parasails");
     break;
   case PETScPrecConfigHypreOptions::Euclid:
     checkError("Set Hypre preconditioner", PCHYPRESetType(pc, "euclid"));
+    if(logger)
+      logger->log("precond","hypre-euclid");
     break;
   default:
     throw Arccore::NotImplementedException(A_FUNCINFO, "Undefined Hypre type");

@@ -31,8 +31,10 @@ PETScSolverConfigMUMPSService::PETScSolverConfigMUMPSService(
 
 void
 PETScSolverConfigMUMPSService::configure(
-    KSP& ksp, const ISpace& space, const MatrixDistribution& distribution)
+    KSP& ksp, const ISpace& space, const MatrixDistribution& distribution, ILogger* logger)
 {
+  if(logger)
+    logger->log("solver","mumps");
   alien_debug([&] { cout() << "configure PETSc mumps solver"; });
 
   checkError(

@@ -44,8 +44,10 @@ PETScPrecConfigAdditiveSchwarzService::needPrematureKSPSetUp() const
 
 void
 PETScPrecConfigAdditiveSchwarzService::configure(
-    PC& pc, const ISpace& space, const MatrixDistribution& distribution)
+						 PC& pc, const ISpace& space, const MatrixDistribution& distribution, ILogger* logger )
 {
+  if(logger)
+    logger->log("precond","additive-schwarz");
   alien_debug([&] { cout() << "configure PETSc additive schwarz preconditioner"; });
   checkError("Set preconditioner", PCSetType(pc, PCASM));
   // KSPSetUp has been already called (cf needPrematureKSPSetUp)
@@ -98,7 +100,7 @@ PETScPrecConfigAdditiveSchwarzService::configure(
   //
   IPETScKSP* ksp_solver = options()->subSolver();
   for (Arccore::Integer i = first; i < nlocal; i++) {
-    ksp_solver->configure(subksp[i], space, distribution);
+    ksp_solver->configure(subksp[i], space, distribution, logger);
   }
 }
 

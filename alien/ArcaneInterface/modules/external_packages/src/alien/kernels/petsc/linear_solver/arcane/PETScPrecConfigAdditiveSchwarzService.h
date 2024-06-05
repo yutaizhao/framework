@@ -52,7 +52,7 @@ class ALIEN_EXTERNAL_PACKAGES_EXPORT PETScPrecConfigAdditiveSchwarzService
 
  public:
   //! Initialisation
-  void configure(PC& pc, const ISpace& space, const MatrixDistribution& distribution);
+  void configure(PC& pc, const ISpace& space, const MatrixDistribution& distributionn, ILogger* logger);
 
   //! Check need of KSPSetUp before calling this PC configure
   virtual bool needPrematureKSPSetUp() const;

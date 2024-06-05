@@ -39,7 +39,7 @@ class ALIEN_EXTERNAL_PACKAGES_EXPORT SymmetricMultiplicativeFieldSplitTypeServic
 
  public:
   //! Configure FieldSplit type
-  Arccore::Integer configure(PC& pc, const Arccore::Integer nbField);
+  Arccore::Integer configure(PC& pc, const Arccore::Integer nbField, ILogger* logger);
 };
 
 /*---------------------------------------------------------------------------*/

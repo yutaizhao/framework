@@ -42,8 +42,10 @@ PETScPrecConfigMUMPSService::PETScPrecConfigMUMPSService(
 //! Initialisation
 void
 PETScPrecConfigMUMPSService::configure(
-    PC& pc, const ISpace& space, const MatrixDistribution& distribution)
+    PC& pc, const ISpace& space, const MatrixDistribution& distribution, ILogger* logger)
 {
+  if(logger)
+    logger->log("precond","mumps");
   alien_debug([&] { cout() << "configure PETSc mumps preconditioner"; });
   checkError("Set preconditioner", PCSetType(pc, PCLU));
 

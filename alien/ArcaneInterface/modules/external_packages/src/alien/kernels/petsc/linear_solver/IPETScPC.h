@@ -9,6 +9,7 @@
 
 #include <alien/data/Space.h>
 #include <alien/distribution/MatrixDistribution.h>
+#include <alien/Logger/ILogger.h>
 
 // For old PETSc version
 #ifndef MATSOLVERSUPERLU_DIST
@@ -43,7 +44,7 @@ class IPETScPC
  public:
   //! Initialisation
   virtual void configure(
-      PC& pc, const ISpace& space, const MatrixDistribution& distribution) = 0;
+			 PC& pc, const ISpace& space, const MatrixDistribution& distribution, ILogger* logger) = 0;
 
   //! Check need of KSPSetUp before calling this PC configure
   virtual bool needPrematureKSPSetUp() const = 0;

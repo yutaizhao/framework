@@ -31,8 +31,10 @@ PETScSolverConfigSuperLUService::PETScSolverConfigSuperLUService(
 //! Initialisation
 void
 PETScSolverConfigSuperLUService::configure(
-    KSP& ksp, const ISpace& space, const MatrixDistribution& distribution)
+					   KSP& ksp, const ISpace& space, const MatrixDistribution& distribution, ILogger* logger)
 {
+  if(logger)
+    logger->log("solver","superlu");
   alien_debug([&] { cout() << "configure PETSc superlu solver"; });
 
   checkError(

@@ -39,8 +39,10 @@ PETScPrecConfigJacobiService::PETScPrecConfigJacobiService(
 //! Initialisation
 void
 PETScPrecConfigJacobiService::configure(PC& pc, [[maybe_unused]] const ISpace& space,
-                                        [[maybe_unused]] const MatrixDistribution& distribution)
+                                        [[maybe_unused]] const MatrixDistribution& distribution, ILogger* logger)
 {
+  if(logger)
+    logger->log("precond","jacobi");
   alien_debug([&] { cout() << "configure PETSc block jacobi preconditioner"; });
   checkError("Set preconditioner", PCSetType(pc, PCBJACOBI));
   // KSPSetUp has been already called (cf needPrematureKSPSetUp)

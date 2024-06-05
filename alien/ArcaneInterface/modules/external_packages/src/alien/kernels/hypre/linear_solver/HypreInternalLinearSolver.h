@@ -9,7 +9,7 @@
 #define ALIEN_KERNELS_HYPRE_LINEARSOLVER_HYPREINTERNALLINEARSOLVER_H
 
 #include <memory>
-#include <alien/Logger/Logger.h>
+#include <alien/Logger/ILogger.h>
 #include <alien/utils/Precomp.h>
 #include <alien/expression/solver/SolverStat.h>
 #include <alien/core/backend/IInternalLinearSolverT.h>
