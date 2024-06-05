@@ -14,6 +14,7 @@
 #include <alien/kernels/ifp/data_structure/IFPVector.h>
 #include <alien/kernels/ifp/data_structure/IFPMatrix.h>
 #include <alien/AlienIFPENSolversPrecomp.h>
+#include <alien/Logger/ILogger.h>
 
 class IOptionsIFPLinearSolver;
 
@@ -94,6 +95,7 @@ class ALIEN_IFPEN_SOLVERS_EXPORT IFPInternalLinearSolver : public ILinearSolver
   SolverStater<IFPInternalLinearSolver> m_stater;
   Integer m_print_info;
   IOptionsIFPLinearSolver* m_options;
+  std::unique_ptr<ILogger> m_logger;
 };
 
 } // namespace Alien

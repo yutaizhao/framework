@@ -206,8 +206,8 @@
       </enumeration>
     </complex>
 
-    <!--service-instance name="logger" type="Alien::ILogger" minOccurs="0" maxOccurs="1">
+    <service-instance name="logger" type="Alien::ILogger" minOccurs="0" maxOccurs="1">
       <description>Logger</description>
-    </service-instance-->
+    </service-instance>
   </options>
 </service>

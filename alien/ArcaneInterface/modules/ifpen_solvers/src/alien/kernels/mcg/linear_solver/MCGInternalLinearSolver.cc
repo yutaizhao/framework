@@ -115,6 +115,7 @@ MCGInternalLinearSolver::MCGInternalLinearSolver(
     Arccore::MessagePassing::IMessagePassingMng* parallel_mng, IOptionsMCGSolver* options)
 : m_parallel_mng(parallel_mng)
 , m_options(options)
+, m_logger(nullptr)
 {
   m_dir_enum[std::string("+Z")] = *((int*)"+Z-Z");
   m_dir_enum[std::string("-Z")] = *((int*)"-Z+Z");
@@ -148,10 +149,8 @@ MCGInternalLinearSolver::~MCGInternalLinearSolver()
   delete m_machine_info;
   delete m_mpi_info;
   delete m_part_info;
-#if 0
   if(m_logger)
     m_logger->report();
-#endif
 }
 /*---------------------------------------------------------------------------*/
 
@@ -165,7 +164,6 @@ MCGInternalLinearSolver::algebra() const
 void
 MCGInternalLinearSolver::init()
 {
-#if 0
   if(m_options->logger().size() && m_logger==nullptr)
     m_logger.reset(m_options->logger()[0]);
   if(m_logger)
@@ -179,7 +177,7 @@ MCGInternalLinearSolver::init()
     oss << m_options->stopCriteriaValue();
     m_logger->log("tol",oss.str());
   }
-#endif
+
   m_init_timer.start();
 
   if (m_parallel_mng == nullptr)
@@ -304,14 +302,12 @@ MCGInternalLinearSolver::init()
 
   m_init_timer.stop();
 
-#if 0  
   if(m_logger)
   {
     m_logger->log("precond",OptionsMCGSolverUtils::preconditionerEnumToString(m_precond_opt));
     m_logger->log("solver",OptionsMCGSolverUtils::solverEnumToString(m_solver_opt));
     m_logger->stop(eStep::init);
   }
-#endif
 }
 
 void
@@ -471,10 +467,8 @@ MCGInternalLinearSolver::printInfo() const
 bool
 MCGInternalLinearSolver::solve(IMatrix const& A, IVector const& b, IVector& x)
 {
-#if 0
   if(m_logger)
     m_logger->start(eStep::solve);
-#endif
   m_prepare_timer.start();
   Integer error = -1;
 
@@ -576,10 +570,8 @@ MCGInternalLinearSolver::solve(IMatrix const& A, IVector const& b, IVector& x)
         cout() << "Number of iterations : " << m_mcg_status.m_num_iter;
       });
     }
-#if 0    
     if(m_logger)
       m_logger->stop(eStep::solve, m_status);
-#endif
     return true;
   } else {
     m_status.succeeded = false;
@@ -592,10 +584,8 @@ MCGInternalLinearSolver::solve(IMatrix const& A, IVector const& b, IVector& x)
         cout() << "Error code             : " << m_mcg_status.m_error;
       });
     }
-#if 0    
     if(m_logger)
       m_logger->stop(eStep::solve, m_status);
-#endif
     return false;
   }
 }

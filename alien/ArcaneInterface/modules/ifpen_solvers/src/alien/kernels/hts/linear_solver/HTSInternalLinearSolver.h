@@ -17,6 +17,7 @@
 #include <alien/kernels/simple_csr/SimpleCSRVector.h>
 #include <alien/kernels/simple_csr/SimpleCSRMatrix.h>
 #include <alien/AlienIFPENSolversPrecomp.h>
+#include <alien/Logger/ILogger.h>
 
 class IOptionsHTSSolver;
 
@@ -43,7 +44,11 @@ class ALIEN_IFPEN_SOLVERS_EXPORT HTSInternalLinearSolver
       IOptionsHTSSolver* options = nullptr);
 
   /** Destructeur de la classe */
-  virtual ~HTSInternalLinearSolver() {}
+  virtual ~HTSInternalLinearSolver()
+  {
+    if(m_logger)
+      m_logger->report();
+  }
 
  public:
   //! Initialisation
@@ -174,6 +179,7 @@ class ALIEN_IFPEN_SOLVERS_EXPORT HTSInternalLinearSolver
 
   IOptionsHTSSolver* m_options = nullptr;
   std::vector<double> m_pressure_diag;
+  std::unique_ptr<ILogger> m_logger;
 };
 
 } // namespace Alien

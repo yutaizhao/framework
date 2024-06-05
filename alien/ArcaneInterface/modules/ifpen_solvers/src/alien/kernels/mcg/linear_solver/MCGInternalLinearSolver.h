@@ -33,6 +33,7 @@
 #include "alien/kernels/mcg/data_structure/MCGMatrix.h"
 #include "alien/kernels/mcg/data_structure/MCGInternal.h"
 #include "alien/kernels/mcg/linear_solver/MCGOptionTypes.h"
+#include <alien/Logger/ILogger.h>
 
 class IOptionsMCGSolver;
 
@@ -248,9 +249,7 @@ class ALIEN_IFPEN_SOLVERS_EXPORT MCGInternalLinearSolver : public ILinearSolver,
   bool m_x0_update = true;
 
   std::vector<int> m_edge_weight;
-#if 0  
   std::unique_ptr<ILogger> m_logger;
-#endif
 };
 
 } // namespace Alien

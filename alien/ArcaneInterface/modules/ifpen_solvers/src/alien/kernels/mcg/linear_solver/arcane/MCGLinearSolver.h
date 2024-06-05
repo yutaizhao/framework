@@ -7,6 +7,7 @@
 
 #include <alien/utils/Precomp.h>
 #include <alien/core/backend/LinearSolver.h>
+#include <alien/Logger/ILogger.h>
 
 #include "alien/AlienIFPENSolversPrecomp.h"
 #include "alien/kernels/mcg/MCGPrecomp.h"
