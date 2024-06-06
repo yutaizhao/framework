@@ -322,7 +322,10 @@ MCGInternalLinearSolver::updateParallelMng(
 
 void
 MCGInternalLinearSolver::end()
-{}
+{
+ if(m_logger)
+    m_logger->report();
+}
 
 Integer
 MCGInternalLinearSolver::_solve(const MCGMatrixType& A, const MCGVectorType& b,

@@ -189,6 +189,8 @@ IFPInternalLinearSolver::updateParallelMng(
 void
 IFPInternalLinearSolver::end()
 {
+  if(m_logger)
+    m_logger->report();
   {
     F2C(ifpsolverfreedata)();
   }

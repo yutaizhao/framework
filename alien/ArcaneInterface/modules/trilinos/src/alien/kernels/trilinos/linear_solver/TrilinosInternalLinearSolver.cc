@@ -201,6 +201,8 @@ template <typename TagT>
 void
 TrilinosInternalLinearSolver<TagT>::end()
 {
+  if(m_logger)
+    m_logger->report();
   if (m_output_level > 0) {
     internalPrintInfo();
   }

@@ -122,6 +122,9 @@ HPDDMInternalSolver::init()
 void
 HPDDMInternalSolver::end()
 {
+  if(m_logger)
+    m_logger->report();
+   
   if (m_output_level > 0)
     internalPrintInfo();
 }

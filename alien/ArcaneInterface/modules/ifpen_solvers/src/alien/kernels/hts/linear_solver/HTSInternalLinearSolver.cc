@@ -222,6 +222,8 @@ HTSInternalLinearSolver::updateParallelMng(
 void
 HTSInternalLinearSolver::end()
 {
+   if(m_logger)
+    m_logger->report();
 }
 
 #ifdef ALIEN_USE_HTSSOLVER
