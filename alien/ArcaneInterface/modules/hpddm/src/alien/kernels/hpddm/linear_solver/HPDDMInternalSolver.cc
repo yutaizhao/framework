@@ -19,6 +19,7 @@
 #include <list>
 
 #include "alien/kernels/hpddm/HPDDMPrecomp.h"
+#include <alien/Logger/ILogger.h>
 
 #include <alien/data/Space.h>
 #include <alien/expression/solver/ILinearSolver.h>
@@ -55,6 +56,7 @@ HPDDMInternalSolver::HPDDMInternalSolver(
 : m_parallel_mng(parallel_mng)
 , m_options(options)
 , m_stater(this)
+, m_logger(nullptr)
 {
 }
 
@@ -66,6 +68,20 @@ HPDDMInternalSolver::init(int argc, char const** argv)
 void
 HPDDMInternalSolver::init()
 {
+   if(m_options->logger().size() && m_logger==nullptr)
+    m_logger.reset(m_options->logger()[0]);
+  if(m_logger)
+  {
+    m_logger->log("package","hpddm");
+    m_logger->start(eStep::init);
+    std::ostringstream oss;
+    oss << m_options->maxIterationNum();
+    m_logger->log("max-it", oss.str());
+    oss.str(std::string());
+    oss << m_options->stopCriteriaValue();
+    m_logger->log("tol", oss.str());
+  }
+  
   m_output_level = m_options->outputLevel();
   // Parsing des options HPDDM
   HPDDM::Option& opt = *HPDDM::Option::get();
@@ -93,6 +109,14 @@ HPDDMInternalSolver::init()
 
   if (m_parallel_mng->commRank() != 0)
     opt.remove("verbosity");
+
+  if(m_logger)
+  {
+    //m_logger->log("precond","none");
+    m_logger->log("solver",localstr(m_options->krylovMethod()));
+    m_logger->stop(eStep::init);
+  }
+  
 }
 
 void
@@ -157,6 +181,9 @@ HPDDMInternalSolver::solve(
   if (m_output_level > 0)
     alien_info([&] { cout() << "HPDDMSolver::solve"; });
 
+   if(m_logger)
+    m_logger->start(eStep::solve);
+
   {
     Alien::BaseSolverStater::Sentry s(m_init_solver_time);
 
@@ -183,7 +210,10 @@ HPDDMInternalSolver::solve(
   _computeSol(x);
 
   m_status.succeeded = m_status.iteration_count < m_options->maxIterationNum();
-
+  
+  if(m_logger)
+    m_logger->stop(eStep::solve, m_status);
+  
   return m_status.succeeded;
 }
 
@@ -193,6 +223,10 @@ HPDDMInternalSolver::solve(CSRMatrixType const& Ad, CSRMatrixType const& An,
 {
   if (m_output_level > 0)
     alien_info([&] { cout() << "HPDDMSolver::solve"; });
+
+  if(m_logger)
+    m_logger->start(eStep::solve);
+   
   {
 
     Alien::BaseSolverStater::Sentry s(m_init_solver_time);
@@ -222,6 +256,9 @@ HPDDMInternalSolver::solve(CSRMatrixType const& Ad, CSRMatrixType const& An,
 
   m_status.succeeded = m_status.iteration_count < m_options->maxIterationNum();
 
+  if(m_logger)
+    m_logger->stop(eStep::solve, m_status);
+  
   return m_status.succeeded;
 }
 #endif // ALIEN_USE_HPDDM

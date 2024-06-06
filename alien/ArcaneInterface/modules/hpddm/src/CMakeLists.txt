@@ -32,6 +32,7 @@ else ()
 endif()
 
 linkLibraries(alien_hpddm Alien::alien_core Alien::alien_semantic_ref)
+target_link_libraries(alien_hpddm PUBLIC logger)
 
 target_include_directories(alien_hpddm PUBLIC
   $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
