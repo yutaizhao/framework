@@ -30,6 +30,7 @@ TrilinosLinearSolver<TagT>::TrilinosLinearSolver(const Arcane::ServiceBuildInfo&
 : ArcaneTrilinosSolverObject(sbi)
 , LinearSolver<TagT>(sbi.subDomain()->parallelMng()->messagePassingMng(), options())
 {
+    Alien::setTraceMng(sbi.subDomain()->traceMng());
 }
 #endif
 template <typename TagT>

@@ -20,6 +20,7 @@ HTSLinearSolver::HTSLinearSolver(const Arcane::ServiceBuildInfo& sbi)
       sbi.subDomain()->parallelMng()->messagePassingMng(), options())
 //, LinearSolver<BackEnd::tag::htssolver>(sbi.subDomain()->parallelMng(), options())
 {
+    Alien::setTraceMng(sbi.subDomain()->traceMng());
 }
 #endif
 
