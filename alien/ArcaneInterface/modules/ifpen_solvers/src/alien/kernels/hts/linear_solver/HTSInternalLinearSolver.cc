@@ -62,6 +62,16 @@ HTSInternalLinearSolver::HTSInternalLinearSolver(
 void
 HTSInternalLinearSolver::init(int argc, char const** argv)
 {
+#ifdef ALIEN_USE_HTSSOLVER
+  m_hts_solver.reset(new HartsSolver::HTSSolver());
+#endif
+}
+
+/*---------------------------------------------------------------------------*/
+
+void
+HTSInternalLinearSolver::init()
+{
   if(m_options->logger().size() && m_logger==nullptr)
     m_logger.reset(m_options->logger()[0]);
   if(m_logger)
@@ -75,16 +85,6 @@ HTSInternalLinearSolver::init(int argc, char const** argv)
     oss << m_options->stopCriteriaValue();
     m_logger->log("tol", oss.str());
   }
-#ifdef ALIEN_USE_HTSSOLVER
-  m_hts_solver.reset(new HartsSolver::HTSSolver());
-#endif
-}
-
-/*---------------------------------------------------------------------------*/
-
-void
-HTSInternalLinearSolver::init()
-{
   SolverStatSentry<HTSInternalLinearSolver> sentry(m_stater, BaseSolverStater::eInit);
   m_output_level = m_options->output();
 
