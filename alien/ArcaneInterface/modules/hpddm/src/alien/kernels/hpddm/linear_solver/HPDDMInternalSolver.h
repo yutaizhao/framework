@@ -25,6 +25,7 @@
 #include <alien/kernels/simple_csr/SimpleCSRVector.h>
 #include <alien/kernels/simple_csr/SimpleCSRMatrix.h>
 #include <alien/AlienHPDDMPrecomp.h>
+#include <alien/Logger/ILogger.h>
 
 #include <alien/kernels/hpddm/linear_solver/ILinearSolverDDM.h>
 #include <alien/kernels/hpddm/data_structure/HPDDMInternal.h>
@@ -54,7 +55,11 @@ class ALIEN_HPDDM_EXPORT HPDDMInternalSolver
   HPDDMInternalSolver(IMessagePassingMng* parallel_mng, IOptionsHPDDMSolver* options);
 
   /** Destructeur de la classe */
-  virtual ~HPDDMInternalSolver() {}
+  virtual ~HPDDMInternalSolver()
+  {
+     if(m_logger)
+      m_logger->report();
+  }
 
  public:
   //! return package back end name
@@ -116,6 +121,8 @@ class ALIEN_HPDDM_EXPORT HPDDMInternalSolver
   Alien::SolverStat m_stat; //<! Statistiques d'ex�cution du solveur
   Alien::SolverStater<HPDDMInternalSolver> m_stater;
   Alien::ILinearSolver::Status m_status;
+  std::unique_ptr<ILogger> m_logger;
+  
   Real m_init_solver_time = 0.;
   Real m_iter_solver_time = 0.;
   Integer m_output_level = 0;

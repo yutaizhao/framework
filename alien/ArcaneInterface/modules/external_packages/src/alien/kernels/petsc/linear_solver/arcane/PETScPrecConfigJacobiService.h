@@ -41,7 +41,7 @@ class ALIEN_EXTERNAL_PACKAGES_EXPORT PETScPrecConfigJacobiService
  public:
   //! Initialisation
   virtual void configure(
-      PC& pc, const ISpace& space, const MatrixDistribution& distribution);
+			 PC& pc, const ISpace& space, const MatrixDistribution& distribution, ILogger* logger);
   //! Check need of KSPSetUp before calling this PC configure
   virtual bool needPrematureKSPSetUp() const;
 };

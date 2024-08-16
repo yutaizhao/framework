@@ -5,11 +5,14 @@
 #include "Appli/IInfoModel.h"
 #endif
 
+#include <alien/Logger/ILogger.h>
+
 #include <alien/kernels/trilinos/TrilinosPrecomp.h>
 #include <alien/utils/Precomp.h>
 #include <alien/AlienTrilinosPrecomp.h>
 #include <alien/kernels/trilinos/TrilinosBackEnd.h>
 #include <alien/core/backend/LinearSolver.h>
+
 #include <alien/kernels/trilinos/linear_solver/TrilinosInternalLinearSolver.h>
 #include <alien/kernels/trilinos/linear_solver/TrilinosOptionTypes.h>
 #include <ALIEN/axl/TrilinosSolver_axl.h>

@@ -56,6 +56,8 @@ if(TARGET htssolver)
     target_link_libraries(alien_ifpen_solvers PRIVATE Boost::system)
 endif()
 
+target_link_libraries(alien_ifpen_solvers PUBLIC logger)
+
 target_include_directories(alien_ifpen_solvers PUBLIC
   $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
   $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>

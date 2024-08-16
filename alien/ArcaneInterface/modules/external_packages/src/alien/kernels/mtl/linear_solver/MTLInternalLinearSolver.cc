@@ -46,6 +46,7 @@ MTLInternalLinearSolver::MTLInternalLinearSolver(
 , m_output_level(0)
 , m_parallel_mng(parallel_mng)
 , m_options(options)
+, m_logger(nullptr)
 {
   ;
 }
@@ -54,7 +55,8 @@ MTLInternalLinearSolver::MTLInternalLinearSolver(
 
 MTLInternalLinearSolver::~MTLInternalLinearSolver()
 {
-  ;
+   if(m_logger)
+    m_logger->report();
 }
 
 /*---------------------------------------------------------------------------*/
@@ -72,12 +74,28 @@ MTLInternalLinearSolver::init()
 // m_global_environment = new mtl::par::environment(argc,argv) ;
 #endif /* USE_PMTL4 */
 
-    m_max_iteration = m_options->maxIterationNum();
+  if(m_options->logger().size() && m_logger==nullptr)
+   m_logger.reset(m_options->logger()[0]);
+  if(m_logger)
+  {
+    m_logger->log("package",this->getBackEndName());
+    m_logger->start(eStep::init);
+    std::ostringstream oss;
+    oss << m_options->maxIterationNum();
+    m_logger->log("max-it", oss.str());
+    oss.str(std::string());
+    oss << m_options->stopCriteriaValue();
+    m_logger->log("tol", oss.str());
+  }
+
+  m_max_iteration = m_options->maxIterationNum();
   m_precision = m_options->stopCriteriaValue();
   m_solver_option = m_options->solver();
   m_preconditioner_option = m_options->preconditioner();
 
   m_initialized = true;
+   if(m_logger)
+    m_logger->stop(eStep::init);
 }
 
 /*---------------------------------------------------------------------------*/
@@ -126,6 +144,8 @@ bool
 MTLInternalLinearSolver::_solve(MatrixInternal::MTLMatrixType const& matrix,
     VectorInternal::MTLVectorType const& rhs, VectorInternal::MTLVectorType& x)
 {
+  if(m_logger)
+   m_logger->start(eStep::solve);
 #ifdef EXPORT
   mtl::io::matrix_market_ostream ifile("matrix.txt");
   ifile << matrix;
@@ -141,18 +161,26 @@ MTLInternalLinearSolver::_solve(MatrixInternal::MTLMatrixType const& matrix,
 
     switch (m_solver_option) {
     case MTLOptionTypes::BiCGStab: {
+      if(m_logger)
+       m_logger->log("solver","bicgs");
       itl::basic_iteration<double> iter(rhs, m_max_iteration, m_precision);
       // itl::noisy_iteration<double> iter(rhs,m_max_iteration,m_precision);
       switch (m_preconditioner_option) {
       case MTLOptionTypes::NonePC: {
+	if(m_logger)
+	 m_logger->log("precond","none");
         itl::pc::identity<MatrixInternal::MTLMatrixType> P(matrix);
         itl::bicgstab(matrix, x, rhs, P, iter);
       } break;
       case MTLOptionTypes::DiagPC: {
+	if(m_logger)
+	 m_logger->log("precond","diag");
         itl::pc::diagonal<MatrixInternal::MTLMatrixType> P(matrix);
         itl::bicgstab(matrix, x, rhs, P, iter);
       } break;
       case MTLOptionTypes::ILU0PC: {
+	if(m_logger)
+	 m_logger->log("precond","ilu0");
         itl::pc::ilu_0<MatrixInternal::MTLMatrixType, float> P(matrix);
         itl::bicgstab(matrix, x, rhs, P, iter);
       } break;
@@ -168,16 +196,23 @@ MTLInternalLinearSolver::_solve(MatrixInternal::MTLMatrixType const& matrix,
       else
         m_status.succeeded = true;
     } break;
+      
     case MTLOptionTypes::CG: {
       std::cout<<"MTL4 CG"<<std::endl ;
+      if(m_logger)
+       m_logger->log("solver","cg");
       //itl::basic_iteration<double> iter(rhs, m_max_iteration, m_precision);
       itl::noisy_iteration<double> iter(rhs,m_max_iteration,m_precision);
       switch (m_preconditioner_option) {
       case MTLOptionTypes::NonePC: {
+        if(m_logger)
+	 m_logger->log("precond","none");
         itl::pc::identity<MatrixInternal::MTLMatrixType> P(matrix);
         itl::cg(matrix, x, rhs, P, iter);
       } break;
       case MTLOptionTypes::DiagPC: {
+	if(m_logger)
+	 m_logger->log("precond","diag");
         itl::pc::diagonal<MatrixInternal::MTLMatrixType> P(matrix);
         itl::cg(matrix, x, rhs, P, iter);
       } break;
@@ -195,9 +230,14 @@ MTLInternalLinearSolver::_solve(MatrixInternal::MTLMatrixType const& matrix,
     } break;
 #ifdef MTL_HAS_UMFPACK
     case MTLOptionTypes::LU: {
+      
+      if(m_logger)
+       m_logger->log("solver","lu");
+      
       mtl::matrix::umfpack::solver<MatrixInternal::MTLMatrixType> solver(matrix);
       solver(x, rhs);
       m_status.succeeded = true;
+      
     } break;
 #endif /* MTL_HAS_UMFPACK */
     default: {
@@ -234,7 +274,9 @@ MTLInternalLinearSolver::_solve(MatrixInternal::MTLMatrixType const& matrix,
   solfile.close();
 // exit(0) ;
 #endif
-
+  
+ if(m_logger)
+    m_logger->stop(eStep::solve, m_status);
   return m_status.succeeded;
 }
 

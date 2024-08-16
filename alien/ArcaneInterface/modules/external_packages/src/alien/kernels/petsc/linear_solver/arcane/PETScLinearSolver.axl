@@ -34,7 +34,9 @@
     <simple name="cmd-line-param" type="string" minOccurs="0" maxOccurs="1">
       <description>command line parameters</description>
     </simple>
-    
+    <service-instance name="logger" type="Alien::ILogger" minOccurs="0" maxOccurs="1">
+      <description>Logger</description>
+    </service-instance>
   </options>
 
 </service>

@@ -7,6 +7,7 @@
 // Pas de pré-déclaration possible sans utiliser les types internes PETSc (_p_PC)
 #include "petscpc.h"
 #include <alien/kernels/petsc/PETScPrecomp.h>
+#include <alien/Logger/ILogger.h>
 
 /*---------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------*/
@@ -20,7 +21,7 @@ class IFieldSplitType
  public:
   //! Configure FieldSplit type
   /*! Returns an int as a PETSc error code */
-  virtual Arccore::Integer configure(PC& pc, const Arccore::Integer nbField) = 0;
+  virtual Arccore::Integer configure(PC& pc, const Arccore::Integer nbField, ILogger* logger) = 0;
 };
 } // namespace Alien
 /*---------------------------------------------------------------------------*/

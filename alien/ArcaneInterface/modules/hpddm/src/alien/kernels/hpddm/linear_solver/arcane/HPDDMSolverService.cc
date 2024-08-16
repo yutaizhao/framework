@@ -14,6 +14,7 @@
 
 #include <alien/utils/Precomp.h>
 #include <alien/AlienHPDDMPrecomp.h>
+#include <alien/Logger/ILogger.h>
 
 #include <alien/kernels/hpddm/HPDDMPrecomp.h>
 #include <alien/kernels/hpddm/HPDDMBackEnd.h>
@@ -53,6 +54,7 @@ HPDDMLinearSolver::HPDDMLinearSolver(const Arcane::ServiceBuildInfo& sbi)
       sbi.subDomain()->parallelMng()->messagePassingMng(), options())
 //, LinearSolver<BackEnd::tag::htssolver>(sbi.subDomain()->parallelMng(), options())
 {
+  Alien::setTraceMng(sbi.subDomain()->traceMng());
 }
 #endif
 

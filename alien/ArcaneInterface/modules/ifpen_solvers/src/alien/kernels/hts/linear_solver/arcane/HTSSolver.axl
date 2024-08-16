@@ -293,5 +293,9 @@
     <simple name="dump-mat-file-name" type="string" default="">
       <description>File name for matrix dump</description>
     </simple>
+
+    <service-instance name="logger" type="Alien::ILogger" minOccurs="0" maxOccurs="1">
+      <description>Logger</description>
+    </service-instance>
   </options>
 </service>

@@ -7,7 +7,6 @@
 
 #include <vector>
 
-
 #include <alien/data/Space.h>
 #include <alien/expression/solver/ILinearSolver.h>
 #include <alien/expression/solver/ILinearAlgebra.h>
@@ -34,6 +33,7 @@
 
 #include <alien/kernels/trilinos/linear_solver/TrilinosOptionTypes.h>
 #include <alien/AlienTrilinosPrecomp.h>
+#include <alien/Logger/ILogger.h>
 
 #include <ALIEN/axl/TrilinosSolver_IOptions.h>
 #include <alien/kernels/trilinos/linear_solver/TrilinosInternalSolver.h>
@@ -74,6 +74,7 @@ TrilinosInternalLinearSolver<TagT>::TrilinosInternalLinearSolver(
     IOptionsTrilinosSolver* options)
 : m_parallel_mng(parallel_mng)
 , m_options(options)
+, m_logger(nullptr)
 {
 }
 
@@ -96,6 +97,20 @@ void
 TrilinosInternalLinearSolver<TagT>::init()
 {
   if(m_initialized) return ;
+  if(m_options->logger().size() && m_logger==nullptr)
+    m_logger.reset(m_options->logger()[0]);
+  if(m_logger)
+  {
+    m_logger->log("package","trilinos");
+    m_logger->start(eStep::init);
+    std::ostringstream oss;
+    oss << m_options->maxIterationNum();
+    m_logger->log("max-it", oss.str());
+    oss.str(std::string());
+    oss << m_options->stopCriteriaValue();
+    m_logger->log("tol", oss.str());
+  }
+  
   bool use_amgx = false;
   if (m_options->muelu().size() > 0 && m_options->muelu()[0]->amgx().size() > 0
       && m_options->muelu()[0]->amgx()[0]->enable())
@@ -142,6 +157,13 @@ TrilinosInternalLinearSolver<TagT>::init()
   m_solver_name = TrilinosOptionTypes::solverName(m_options->solver());
   m_trilinos_solver->initSolverParameters(m_options);
   m_initialized = true ;
+  
+  if(m_logger)
+  {
+    m_logger->log("precond",m_precond_name);
+    m_logger->log("solver",m_solver_name);
+    m_logger->stop(eStep::init);
+  }
 }
 
 template <typename TagT>
@@ -157,6 +179,8 @@ bool
 TrilinosInternalLinearSolver<TagT>::solve(
     const CSRMatrixType& matrix, const CSRVectorType& b, CSRVectorType& x)
 {
+  if(m_logger)
+    m_logger->start(eStep::solve);
   typename TrilinosInternal::SolverInternal<TagT>::Status status =
       m_trilinos_solver->solve(*matrix.internal()->m_internal,
                                 matrix.internal()->m_coordinates,
@@ -165,6 +189,10 @@ TrilinosInternalLinearSolver<TagT>::solve(
   m_status.succeeded = status.m_converged;
   m_status.iteration_count = status.m_num_iters;
   m_status.residual = status.m_residual;
+
+   if(m_logger)
+    m_logger->stop(eStep::solve, m_status);
+   
   return m_status.succeeded;
 }
 /*---------------------------------------------------------------------------*/
@@ -173,6 +201,8 @@ template <typename TagT>
 void
 TrilinosInternalLinearSolver<TagT>::end()
 {
+  if(m_logger)
+    m_logger->report();
   if (m_output_level > 0) {
     internalPrintInfo();
   }

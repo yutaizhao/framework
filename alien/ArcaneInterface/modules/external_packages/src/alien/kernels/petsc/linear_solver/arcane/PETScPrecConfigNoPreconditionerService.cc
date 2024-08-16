@@ -39,8 +39,10 @@ PETScPrecConfigNoPreconditionerService::PETScPrecConfigNoPreconditionerService(
 void
 PETScPrecConfigNoPreconditionerService::configure(PC& pc,
                                                   [[maybe_unused]] const ISpace& space,
-                                                  [[maybe_unused]] const MatrixDistribution& distribution)
+                                                  [[maybe_unused]] const MatrixDistribution& distribution, ILogger* logger)
 {
+  if(logger)
+    logger->log("precond","nopreconditioner");
   alien_debug([&] { cout() << "configure PETSc none preconditioner"; });
   checkError("Set preconditioner", PCSetType(pc, PCNONE));
 }

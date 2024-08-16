@@ -37,8 +37,10 @@ AdditiveFieldSplitTypeService::AdditiveFieldSplitTypeService(
 
 //! Configure FieldSplit type
 Arccore::Integer
-AdditiveFieldSplitTypeService::configure(PC& pc,[[maybe_unused]] const Arccore::Integer nbField)
+AdditiveFieldSplitTypeService::configure(PC& pc,[[maybe_unused]] const Arccore::Integer nbField, ILogger* logger)
 {
+  if(logger)
+    logger->log("precond","additive-field-split");
   alien_debug([&] { cout() << "configure PETSc additive FlieldSplit preconditioner"; });
   Arccore::Integer code = PCFieldSplitSetType(pc, PC_COMPOSITE_ADDITIVE);
   return code;

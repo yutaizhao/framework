@@ -66,7 +66,9 @@ endif()
 linkLibraries(alien_external_packages 
               Boost::program_options
               BLAS::BLAS)
-
+              
+target_link_libraries(alien_external_packages PUBLIC logger)
+              
 target_include_directories(alien_external_packages PUBLIC
         $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
         $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>

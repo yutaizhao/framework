@@ -35,8 +35,18 @@ PETScSolverConfigGMRESService::PETScSolverConfigGMRESService(
 //! Initialisation
 void
 PETScSolverConfigGMRESService::configure(
-    KSP& ksp, const ISpace& space, const MatrixDistribution& distribution)
+					 KSP& ksp, const ISpace& space, const MatrixDistribution& distribution, ILogger* logger)
 {
+  if(logger)
+  {
+    std::ostringstream oss;
+    oss << options()->numIterationsMax();
+    logger->log("max-it", oss.str());
+    oss.str(std::string());
+    oss << options()->stopCriteriaValue();
+    logger->log("tol", oss.str());
+    logger->log("solver","gmres");
+  }
   alien_debug([&] { cout() << "configure PETSc gmres solver"; });
 
   PETScInitType::apply(this, ksp, options()->initType());
@@ -72,9 +82,9 @@ PETScSolverConfigGMRESService::configure(
   bool needSetUp = preconditioner->needPrematureKSPSetUp();
   if (needSetUp) {
     checkError("Solver setup", KSPSetUp(ksp));
-    preconditioner->configure(pc, space, distribution);
+    preconditioner->configure(pc, space, distribution, logger);
   } else {
-    preconditioner->configure(pc, space, distribution);
+    preconditioner->configure(pc, space, distribution, logger);
     checkError("Solver setup", KSPSetUp(ksp));
   }
 }

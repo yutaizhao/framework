@@ -10,6 +10,8 @@
 #include <alien/AlienIFPENSolversPrecomp.h>
 #include <alien/kernels/hts/HTSBackEnd.h>
 #include <alien/core/backend/LinearSolver.h>
+#include <alien/Logger/ILogger.h>
+
 #include <alien/kernels/hts/linear_solver/HTSInternalLinearSolver.h>
 #include <alien/kernels/hts/linear_solver/HTSOptionTypes.h>
 #include <ALIEN/axl/HTSSolver_axl.h>

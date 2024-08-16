@@ -19,6 +19,7 @@ IFPLinearSolverService::IFPLinearSolverService(const Arcane::ServiceBuildInfo& s
 , Alien::IFPInternalLinearSolver(
       sbi.subDomain()->parallelMng()->messagePassingMng(), options())
 {
+    Alien::setTraceMng(sbi.subDomain()->traceMng());
 }
 #endif
 

@@ -44,8 +44,10 @@ PETScPrecConfigDiagonalService::needPrematureKSPSetUp() const
 void
 PETScPrecConfigDiagonalService::configure(PC& pc,
                                           [[maybe_unused]] const ISpace& space,
-                                          [[maybe_unused]] const MatrixDistribution& distribution)
+                                          [[maybe_unused]] const MatrixDistribution& distribution, ILogger* logger)
 {
+  if(logger)
+    logger->log("precond","diagonal");
   alien_debug([&] { cout() << "configure PETSc none preconditioner"; });
   checkError("Set preconditioner", PCSetType(pc, PCNONE));
 }

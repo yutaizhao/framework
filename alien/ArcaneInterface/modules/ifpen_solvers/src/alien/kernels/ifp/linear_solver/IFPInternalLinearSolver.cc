@@ -44,6 +44,7 @@ IFPInternalLinearSolver::IFPInternalLinearSolver(
 , m_print_info(0)
 , m_options(options)
 , m_stater(this)
+, m_logger(nullptr)
 {
 }
 
@@ -51,7 +52,8 @@ IFPInternalLinearSolver::IFPInternalLinearSolver(
 
 IFPInternalLinearSolver::~IFPInternalLinearSolver()
 {
-  ;
+   if(m_logger)
+    m_logger->report();
 }
 
 /*---------------------------------------------------------------------------*/
@@ -62,7 +64,21 @@ IFPInternalLinearSolver::init()
   SolverStatSentry<IFPInternalLinearSolver> sentry(m_stater, BaseSolverStater::eInit);
   if (m_parallel_mng == nullptr)
     return;
-
+  
+  if(m_options->logger().size() && m_logger==nullptr)
+    m_logger.reset(m_options->logger()[0]);
+  if(m_logger)
+  {
+    m_logger->log("package",this->getBackEndName());
+    m_logger->start(eStep::init);
+    std::ostringstream oss;
+    oss << m_options->numIterationsMax();
+    m_logger->log("max-it", oss.str());
+    oss.str(std::string());
+    oss << m_options->stopCriteriaValue();
+    m_logger->log("tol", oss.str());
+  }
+  
   alien_info(m_print_info, [&] { cout() << "IFPInternalLinearSolver::init"; });
 
   if (m_options->output() > 0)
@@ -83,15 +99,23 @@ IFPInternalLinearSolver::init()
   switch (m_options->precondOption()) {
   case IFPSolverProperty::Diag:
     m_precond_option = 0;
+    if(m_logger)
+	m_logger->log("precond","diag");
     break;
   case IFPSolverProperty::ILU0:
     m_precond_option = 1;
+    if(m_logger)
+	m_logger->log("precond","ilu0");
     break;
   case IFPSolverProperty::AMG:
     m_precond_option = 2;
+    if(m_logger)
+	m_logger->log("precond","amg");
     break;
   case IFPSolverProperty::CprAmg:
     m_precond_option = 3;
+    if(m_logger)
+	m_logger->log("precond","cpramg");
     break;
   default:
     m_precond_option = 0;
@@ -136,6 +160,11 @@ IFPInternalLinearSolver::init()
   }
 
   F2C(ifpsolverinit)(&fcomm, &needMpiInit, &m_normalize_opt);
+  if(m_logger)
+  {
+    m_logger->log("solver","none");
+    m_logger->stop(eStep::init);
+  }
 }
 
 /*---------------------------------------------------------------------------*/
@@ -160,6 +189,8 @@ IFPInternalLinearSolver::updateParallelMng(
 void
 IFPInternalLinearSolver::end()
 {
+  if(m_logger)
+    m_logger->report();
   {
     F2C(ifpsolverfreedata)();
   }
@@ -181,7 +212,10 @@ IFPInternalLinearSolver::solve(const MatrixType& A, const VectorType& b, VectorS
 {
   if (m_parallel_mng == nullptr)
     return true;
-
+  
+  if(m_logger)
+    m_logger->start(eStep::solve);
+ 
   bool isSolverOk = false;
 
   SolverStatSentry<IFPInternalLinearSolver> sentry(m_stater, BaseSolverStater::ePrepare);
@@ -233,7 +267,10 @@ IFPInternalLinearSolver::solve(const MatrixType& A, const VectorType& b, VectorS
   } else {
     // La valeur de b en cas d'échec n'est actuellement pas bien définie : à tester.
   }
-
+  
+  if(m_logger)
+    m_logger->stop(eStep::solve, m_status);
+ 
   return isSolverOk;
 }
 

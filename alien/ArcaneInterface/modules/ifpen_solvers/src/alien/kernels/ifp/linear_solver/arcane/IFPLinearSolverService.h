@@ -11,6 +11,7 @@
 #include <alien/core/backend/LinearSolver.h>
 #include <alien/kernels/ifp/linear_solver/IFPSolverProperty.h>
 #include <alien/kernels/ifp/linear_solver/IFPInternalLinearSolver.h>
+#include <alien/Logger/ILogger.h>
 
 #include <ALIEN/axl/IFPLinearSolver_axl.h>
 #include <alien/AlienIFPENSolversPrecomp.h>

@@ -36,8 +36,13 @@ PETScSolverConfigLUService::PETScSolverConfigLUService(
 void
 PETScSolverConfigLUService::configure(KSP& ksp,
                                       [[maybe_unused]] const ISpace& space,
-                                      [[maybe_unused]] const MatrixDistribution& distribution)
+                                      [[maybe_unused]] const MatrixDistribution& distribution, ILogger* logger)
 {
+  if(logger)
+  {
+    std::ostringstream oss;
+    logger->log("solver","lu");
+  }
   alien_debug([&] { cout() << "configure PETSc lu solver"; });
 
   checkError(

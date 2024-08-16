@@ -38,8 +38,10 @@ SchurFieldSplitTypeService::SchurFieldSplitTypeService(
 
 //! Configure FieldSplit type
 Arccore::Integer
-SchurFieldSplitTypeService::configure(PC& pc, const Arccore::Integer nbField)
+SchurFieldSplitTypeService::configure(PC& pc, const Arccore::Integer nbField, ILogger* logger)
 {
+  if(logger)
+    logger->log("precond","schur-field-split");
   if (nbField != 2) {
     alien_fatal([&] {
       cout() << "FieldSplit Schur decomposition can be applied only on 2 blocks "

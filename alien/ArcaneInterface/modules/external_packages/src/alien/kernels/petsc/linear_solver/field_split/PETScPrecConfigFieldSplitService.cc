@@ -46,8 +46,10 @@ PETScPrecConfigFieldSplitService::PETScPrecConfigFieldSplitService(
 //! Initialisation
 void
 PETScPrecConfigFieldSplitService::configure(
-    PC& pc, const ISpace& space, const MatrixDistribution& distribution)
+					    PC& pc, const ISpace& space, const MatrixDistribution& distribution, ILogger* logger)
 {
+  if(logger)
+    logger->log("precond", "field-split");
   alien_debug([&] { cout() << "configure PETSc FlieldSplit preconditioner"; });
   /*const Integer blocks_size = options()->block().size();
     traceMng()->error() << "blocks_size 1 "<< blocks_size;
@@ -86,7 +88,7 @@ PETScPrecConfigFieldSplitService::configure(
     alien_fatal([&] { cout() << "field split solver null"; });
 
   // Configure type of FieldSplit decomposition
-  checkError("Set FieldSplit type", field_split_solver->configure(pc, nbFields));
+  checkError("Set FieldSplit type", field_split_solver->configure(pc, nbFields, logger));
 
   PCSetUp(pc);
 
@@ -103,11 +105,11 @@ PETScPrecConfigFieldSplitService::configure(
   for (Arccore::Integer i = 0; i < nbFields; ++i) {
     if (m_field_tags[i] == m_default_block_tag) {
       IPETScKSP* sub_solver = options()->defaultBlock()[0]->solver();
-      sub_solver->configure(subksp[i], space, distribution);
+      sub_solver->configure(subksp[i], space, distribution,logger);
     } else {
       // pas bon verifier manque indirection
       IPETScKSP* sub_solver = options()->block()[i]->solver();
-      sub_solver->configure(subksp[i], space, distribution);
+      sub_solver->configure(subksp[i], space, distribution, logger);
     }
   }
 }

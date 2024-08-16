@@ -55,6 +55,7 @@ HTSInternalLinearSolver::HTSInternalLinearSolver(
 : m_parallel_mng(parallel_mng)
 , m_options(options)
 , m_stater(this)
+, m_logger(nullptr)
 {
 }
 
@@ -71,6 +72,19 @@ HTSInternalLinearSolver::init(int argc, char const** argv)
 void
 HTSInternalLinearSolver::init()
 {
+  if(m_options->logger().size() && m_logger==nullptr)
+    m_logger.reset(m_options->logger()[0]);
+  if(m_logger)
+  {
+    m_logger->log("package",this->getBackEndName());
+    m_logger->start(eStep::init);
+    std::ostringstream oss;
+    oss << m_options->maxIterationNum();
+    m_logger->log("max-it", oss.str());
+    oss.str(std::string());
+    oss << m_options->stopCriteriaValue();
+    m_logger->log("tol", oss.str());
+  }
   SolverStatSentry<HTSInternalLinearSolver> sentry(m_stater, BaseSolverStater::eInit);
   m_output_level = m_options->output();
 
@@ -135,11 +149,15 @@ HTSInternalLinearSolver::init()
     m_hts_solver->setParameter<int>("poly-degree", m_options->polyDegree());
     m_hts_solver->setParameter<int>(
         "poly-factor-max-iter", m_options->polyFactorMaxIter());
+    if(m_logger)
+       m_logger->log("precond","chebyshev");
     break;
   case HTSOptionTypes::ILU0FP:
     m_hts_solver->setParameter<int>("ilufp-factor-niter", m_options->ilufpFactorNiter());
     m_hts_solver->setParameter<int>("ilufp-solver-niter", m_options->ilufpSolverNiter());
     m_hts_solver->setParameter<double>("ilufp-tol", m_options->ilufpTol());
+    if(m_logger)
+       m_logger->log("precond","ilu0fp");
     break;
   case HTSOptionTypes::Cpr:
   case HTSOptionTypes::DDMLPC:
@@ -164,6 +182,8 @@ HTSInternalLinearSolver::init()
       m_hts_solver->setParameter<int>("ml-neumann-cor", opt->neumannCor());
       m_hts_solver->setParameter<int>("ilu-level", m_options->iluLevel());
       m_hts_solver->setParameter<double>("ilu-drop-tol", m_options->iluDropTol());
+      if(m_logger)
+        m_logger->log("precond","ddml");
     }
     break;
   case HTSOptionTypes::AMGPC:
@@ -182,6 +202,12 @@ HTSInternalLinearSolver::init()
   m_hts_solver->setParameter<int>("sendrecv-opt", m_options->sendrecvOpt());
   m_hts_solver->setParameter<int>("pqueue", m_options->pqueue());
   m_hts_solver->setParameter<int>("affinity-mode", m_options->affinityMode());
+
+  if(m_logger)
+  {
+    m_logger->log("solver","bicgs");
+    m_logger->stop(eStep::init);
+  }
 }
 
 void
@@ -196,6 +222,8 @@ HTSInternalLinearSolver::updateParallelMng(
 void
 HTSInternalLinearSolver::end()
 {
+   if(m_logger)
+    m_logger->report();
 }
 
 #ifdef ALIEN_USE_HTSSOLVER
@@ -203,6 +231,8 @@ bool
 HTSInternalLinearSolver::solve(
     CSRMatrixType const& A, CSRVectorType const& b, CSRVectorType& x)
 {
+  if(m_logger)
+    m_logger->start(eStep::solve);
   using namespace HartsSolver;
 
   if (m_output_level > 0)
@@ -368,6 +398,8 @@ HTSInternalLinearSolver::solve(
         cout() << "Number of iterations : " << m_hts_status.num_iter;
       });
     }
+    if(m_logger)
+      m_logger->stop(eStep::solve, m_status);
     return true;
   } else {
     m_status.succeeded = false;
@@ -378,6 +410,8 @@ HTSInternalLinearSolver::solve(
         cout() << "Error code             : " << m_hts_status.error;
       });
     }
+    if(m_logger)
+      m_logger->stop(eStep::solve, m_status);
     return false;
   }
 }

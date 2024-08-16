@@ -38,8 +38,10 @@ PETScPrecConfigHypreEuclidService::PETScPrecConfigHypreEuclidService(
 //! Initialisation
 void
 PETScPrecConfigHypreEuclidService::configure(PC& pc, [[maybe_unused]] const ISpace& space,
-                                             [[maybe_unused]] const MatrixDistribution& distribution)
+                                             [[maybe_unused]] const MatrixDistribution& distribution, ILogger* logger)
 {
+  if(logger)
+    logger->log("precond", "euclid");
   alien_debug([&] { cout() << "configure PETSc euclid preconditioner"; });
   checkError("Set preconditioner", PCSetType(pc, PCHYPRE));
   checkError("Set Hypre preconditioner", PCHYPRESetType(pc, "euclid"));
