@@ -31,7 +31,7 @@ PETScSolverConfigMUMPSService::PETScSolverConfigMUMPSService(
 
 void
 PETScSolverConfigMUMPSService::configure(
-    KSP& ksp, const ISpace& space, const MatrixDistribution& distribution)
+                                         KSP& ksp, const ISpace& space, const MatrixDistribution& distribution, ILogger* logger)
 {
 #ifndef PETSC_HAVE_MUMPS
   alien_fatal([&] { cout() << "MUMPS not available in PETSc"; });

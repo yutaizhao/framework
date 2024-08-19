@@ -38,7 +38,7 @@ class ALIEN_EXTERNAL_PACKAGES_EXPORT PETScSolverConfigMUMPSService :
 
  public:
   //! Initialisation
-  void configure(KSP& ksp, const ISpace& space, const MatrixDistribution& distribution);
+  void configure(KSP& ksp, const ISpace& space, const MatrixDistribution& distribution, ILogger* logger);
 };
 
 } // namespace Alien

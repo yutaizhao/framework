@@ -42,7 +42,7 @@ PETScPrecConfigMUMPSService::PETScPrecConfigMUMPSService(
 //! Initialisation
 void
 PETScPrecConfigMUMPSService::configure(
-    PC& pc, const ISpace& space, const MatrixDistribution& distribution)
+                                       PC& pc, const ISpace& space, const MatrixDistribution& distribution, ILogger* logger)
 {
 #ifndef PETSC_HAVE_MUMPS
   alien_fatal([&] { cout() << "MUMPS not available in PETSc"; });
